@@ -1,0 +1,67 @@
+.Navbar_Main_Container {
+  width: 100vw;
+  padding-left: 56px;
+  padding-right: 56px;
+  padding-top: 56px;
+}
+.Nabar_main_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.Navbar_Content_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: #000000;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Navabar_List_Wrapper > li {
+  list-style: none;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 48px;
+  /* text-align: center; */
+  letter-spacing: 4px;
+  color: #ffffff;
+  margin: 24px 0px;
+  position: relative;
+  z-index: 99999;
+}
+.Terafort_Bg_logo {
+  position: absolute;
+  top: 37%;
+  left: 22%;
+  opacity: 0.1;
+}
+.Nabar_main_wrapper > div > img {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1439px) {
+}
+@media only screen and (max-width: 1200px) {
+}
+@media only screen and (max-width: 992px) {
+}
+@media only screen and (max-width: 768px) {
+}
+@media only screen and (max-width: 576px) {
+  .Navbar_Main_Container {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 40px;
+  }
+  .Navbar_Content_wrapper {
+    width: 99.9vw;
+  }
+  .Terafort_Bg_logo {
+    display: none;
+  }
+}

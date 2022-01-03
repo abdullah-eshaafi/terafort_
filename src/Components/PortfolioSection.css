@@ -1,0 +1,129 @@
+.Portfolio_Section_Wrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.Eshaafi_Portfolio_Img_Section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+}
+
+.Eshaafi_Portfolio_heading_Section {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  width: inherit;
+}
+
+.Eshaafi_Portfolio_Slides > h6 {
+  transform: rotate(-90deg);
+  margin-right: 16px;
+}
+.Portfolio_text_Section {
+  background-color: white;
+}
+
+.Portfolio_Section_text_Wrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.Portfolio_Section_text_main_Wrapper {
+  display: flex;
+  align-items: center;
+  height: inherit;
+}
+
+/* .Portfolio_Eshaafi_horizontal_Line > img {
+  margin-top: 70px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+.Portfolio_Eshaafi_horizontal_Line > h5 {
+  margin-top: 80px;
+} */
+
+.Portfolio_Section_text_heading_Wrapper {
+  margin-bottom: 40px;
+}
+
+.Portfolio_Section_para_main_Wrapper {
+  position: relative;
+}
+
+.potfolio_visiting_link > img {
+  margin-left: 16px;
+}
+
+/* 
+=======================================================Potfolio Text _section============================== */
+
+.Potfolio_Text_Wrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.Potfolio_Img_Section {
+  padding-top: 69px;
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+.Potfolio_Img_Section_aurelian {
+  padding-top: 69px;
+  padding-right: 24px;
+  margin-left: -48px;
+}
+
+.Potfolio_PortFolioLine_Section {
+  padding-top: 60px;
+}
+
+.Potfolio_PortFolioLine_Section_Aurelian {
+  padding-top: 0px;
+}
+
+.PorfolioDesc_Section {
+  margin-top: 40px;
+}
+
+.potfolio_visiting_link {
+  margin-top: 40px;
+}
+
+.Eshaafi_Portfolio_Slides > h6 {
+  transform: rotate(-90deg);
+  margin-right: 16px;
+}
+
+@media only screen and (max-width: 1439px) {
+}
+@media only screen and (max-width: 1200px) {
+}
+@media only screen and (max-width: 992px) {
+  .Potfolio_PortFolioLine_Section {
+    padding-top: 16px;
+  }
+}
+@media only screen and (max-width: 768px) {
+}
+@media only screen and (max-width: 576px) {
+  .Eshaafi_Portfolio_Slides > h6 {
+    display: none;
+  }
+  .Potfolio_PortFolioLine_Section {
+    padding-top: 0px;
+  }
+  .PorfolioDesc_Section {
+    margin-top: 16px;
+  }
+}

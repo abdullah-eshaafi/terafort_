@@ -1,0 +1,100 @@
+.Conatct_wrapper {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.Page10 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  scroll-behavior: smooth;
+}
+.badShahi_mosque {
+  height: 100vh;
+}
+
+.Lahore_Container {
+  background: #000000;
+}
+
+.Hr_Department_Contact {
+  height: 100vh;
+  display: flex;
+  align-items: end;
+}
+
+.Hr_Department_Contact_container {
+  margin-bottom: 111px;
+}
+
+.contact_Lahore_heading {
+  position: absolute;
+  top: 17.8%;
+  left: 48%;
+}
+
+.Hr_Department_Contact_Filed {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.Hr_Department_Contact_second_filled {
+  width: 100%;
+}
+
+.contact_form_input > div > input,
+.contact_form_input > div > textarea {
+  width: 100%;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border: none;
+  border-bottom: 1px solid #dadada;
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  /* identical to box height, or 175% */
+
+  letter-spacing: 0.5px;
+
+  color: #000000;
+}
+.contact_form_input > div > input:focus-visible,
+.contact_form_input > div > textarea:focus-visible {
+  outline: none;
+  border-bottom: 1px solid #dadada;
+}
+.contact_form_input > div > input::placeholder,
+.contact_form_input > div > textarea::placeholder {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.5px;
+  color: #7e7e7e;
+}
+
+#send_msg_btn {
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding-bottom: 12px;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+#send_msg_btn > img {
+  padding-left: 12px;
+}

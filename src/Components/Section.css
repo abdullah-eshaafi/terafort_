@@ -1,0 +1,114 @@
+.Who_section_container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+.Who_section_wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.Who_section_bg_text {
+  position: relative;
+  top: 34.6%;
+  text-align: center;
+}
+.Who_section_main_text {
+  width: 100%;
+  height: 61.7%;
+  position: absolute;
+  top: 40.2%;
+  display: flex;
+  justify-content: center;
+}
+.Who_section_main_text_cneter {
+  width: 49.4%;
+}
+.WhoMAINtext {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.about_img_section {
+  margin-left: 16px;
+
+  box-sizing: border-box;
+}
+
+.Vision_digits {
+  position: absolute;
+  top: 32%;
+  left: 25%;
+  display: flex;
+}
+
+.Vision_digits > img {
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-top: -8px;
+}
+
+.Mission_bootom_arrows {
+  position: absolute;
+  bottom: 25.5%;
+  left: 45.6%;
+}
+
+#HomePage_Left_Arrow {
+  margin-right: 8px;
+}
+
+#chalo {
+  position: relative;
+  top: 50px;
+}
+/* 
+Css For ResponsiveNess In Tablets */
+
+@media only screen and (max-width: 1439px) {
+  .Who_section_main_text_cneter {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .Who_section_main_text_cneter {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .Who_section_main_text_cneter {
+    width: 90%;
+  }
+  .Who_section_bg_text {
+    top: 40.6%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .Who_section_main_text_cneter {
+    width: 95%;
+  }
+  .Who_section_bg_text {
+    top: 44.6%;
+  }
+  .Who_section_main_text {
+    top: 43.2%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .Who_section_main_text_cneter {
+    width: 97%;
+  }
+  .Who_section_bg_text {
+    top: 38.6%;
+  }
+  .Who_section_main_text {
+    top: 38.2%;
+    left: 3%;
+    padding-right: 12px;
+  }
+  .about_text_section {
+    margin-top: 40px;
+  }
+}

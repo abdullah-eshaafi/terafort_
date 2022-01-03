@@ -1,0 +1,113 @@
+.Careers_Page_wrapper {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.page5 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  scroll-behavior: smooth;
+  transition: 800ms;
+}
+
+/* .Careers_facility_wrapper {
+    height: 100%;
+} */
+.Careers_facility_wrapper_Container {
+  height: 100vh;
+}
+
+.Careers_facility_img_wrapper {
+  padding-top: 13.33%;
+}
+
+.Faciliteis_heading {
+  margin-top: 40px;
+}
+
+.facilities_list {
+  margin-top: 24px;
+}
+
+.Career_Roles_Wrapper {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+#Career_Family_section {
+  margin-top: 13px;
+}
+
+.careers_table_wrapper {
+  border-bottom: 1px solid #dadada;
+}
+.careers_table_wrapper > h5 {
+  padding-bottom: 24px;
+}
+.careers_table_last_element {
+  display: flex;
+  justify-content: end;
+}
+
+.careers_dark_table_wrapper {
+  padding-top: 24px;
+}
+
+.About_Departments_wrapper {
+  background: #eeeeee;
+  position: relative;
+}
+
+.About_Departments_Container {
+  height: 100vh;
+  position: relative;
+  z-index: 3;
+}
+
+.Careers_Departments {
+  position: absolute;
+  top: 34.9%;
+  left: 20.3%;
+  z-index: 1;
+}
+.About_Departments_Wrapper {
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+.mt_40 {
+  margin-top: 40px;
+}
+
+.Careers_Apply {
+  margin-top: 26.9%;
+}
+
+.page8 {
+  position: relative;
+  width: auto;
+  height: auto;
+  scroll-snap-align: start;
+}
+.Departments_heading_Text_position {
+  position: absolute;
+  top: 39.9%;
+  left: 30.3%;
+  z-index: 10;
+}
+
+.Career_ApplY_section_wrapper {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.Apply_job > input {
+  width: 100%;
+}

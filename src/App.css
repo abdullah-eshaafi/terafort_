@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant&family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant&family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.row,
+.col {
+  margin: 0;
+  padding: 0;
+}
+
+/* Font in the Website */
+
+h1 {
+  font-family: Cormorant, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin-bottom: 0 !important;
+}
+
+h2 {
+  font-family: Cormorant;
+  font-style: normal;
+  font-weight: 500;
+  margin-bottom: 0 !important;
+}
+
+h6 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  margin-bottom: 0 !important;
+}
+
+h5 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  margin-bottom: 0 !important;
+}
+
+p {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0 !important;
+}
+/* font sizes in the website */
+
+.size_80 {
+  font-size: 80px;
+}
+.size_225 {
+  font-size: 225px;
+}
+
+.size_32 {
+  font-size: 32px;
+}
+
+.size_16 {
+  font-size: 16px;
+}
+.size_120 {
+  font-size: 120px;
+}
+
+.size_24 {
+  font-size: 24px;
+}
+
+.size_52 {
+  font-size: 52px;
+}
+
+/*Line height in the websites */
+
+.line-97 {
+  line-height: 97px;
+}
+
+.line-272 {
+  line-height: 272px;
+}
+
+.line-180 {
+  line-height: 180px;
+}
+.line-56 {
+  line-height: 56px;
+}
+
+.line-24 {
+  line-height: 24px;
+}
+
+.line-145 {
+  line-height: 145px;
+}
+
+.line-120 {
+  line-height: 120px;
+}
+
+.line-40 {
+  line-height: 40px;
+}
+
+.line-36 {
+  line-height: 36px;
+}
+.line-272 {
+  line-height: 272px;
+}
+.line-30 {
+  line-height: 30px;
+}
+
+.line-28 {
+  line-height: 28px;
+}
+
+.line-52 {
+  line-height: 52px;
+}
+/* text letter in the website */
+
+.letter-1_5 {
+  letter-spacing: -1.5px;
+}
+
+.letter_0_5 {
+  letter-spacing: 0.5px;
+}
+/* text Color in the website */
+
+.text_black {
+  color: #3b4046;
+}
+.text_black_rgba {
+  color: rgba(59, 64, 70, 0.12);
+}
+
+.text_black_dark {
+  color: #000000;
+}
+
+.text_white {
+  color: #ffffff;
+}
+
+.text_black_666 {
+  color: #666666;
+}
+
+.text_A2A2A2 {
+  color: #a2a2a2;
+}
+
+.text_white_Rgba {
+  color: rgba(255, 255, 255, 0.57);
+}
+
+.Careers_Apply_text {
+  margin-top: 40px;
+}
+
+/* 
+Css For ResponsiveNess In Tablets */
+
+@media only screen and (max-width: 1439px) {
+}
+@media only screen and (max-width: 1200px) {
+  .size_225 {
+    font-size: 190px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .size_225 {
+    font-size: 140px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .size_80 {
+    font-size: 60px;
+  }
+  .size_225 {
+    font-size: 110px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .size_32 {
+    font-size: 26px;
+  }
+  .size_80 {
+    font-size: 40px;
+  }
+  .line-56 {
+    line-height: 40px;
+  }
+  .line-180 {
+    line-height: 120px;
+  }
+
+  .size_120 {
+    font-size: 60px;
+  }
+  .line-145 {
+    line-height: 100px;
+  }
+  .line-40 {
+    line-height: 24px;
+  }
+
+  .size_24 {
+    font-size: 16px;
+  }
+  .line-120 {
+    line-height: 70px;
+  }
+}

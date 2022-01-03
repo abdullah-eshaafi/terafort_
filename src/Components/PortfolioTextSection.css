@@ -1,0 +1,19 @@
+@media only screen and (max-width: 1439px) {
+}
+@media only screen and (max-width: 1200px) {
+}
+@media only screen and (max-width: 992px) {
+  .responvie_Portfolio_Line {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .responvie_Portfolio_Line {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .responvie_Portfolio_Line {
+    display: none !important;
+  }
+}

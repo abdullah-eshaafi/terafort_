@@ -1,0 +1,178 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.HomePage_wrapper {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  position: relative;
+  overflow-x: hidden;
+}
+.Page1 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  scroll-behavior: smooth;
+}
+
+.HomePage-navbar-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+.Page2 {
+  position: relative;
+  width: auto;
+  height: auto;
+  scroll-snap-align: start;
+}
+.who_we_are_section {
+  background: #ffffff;
+}
+
+#Homepage_video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  background-color: black;
+  background-size: cover;
+}
+
+@keyframes homePagePic {
+  0% {
+    left: 42%;
+  }
+  100% {
+    left: 95%;
+  }
+}
+.homePagePic {
+  position: relative;
+}
+.hompage_uparrow_img {
+  position: absolute;
+  top: 0;
+  left: 42%;
+  animation-name: homePagePic;
+  animation-duration: 1.5s;
+  animation-delay: 4.75s;
+  animation-fill-mode: forwards;
+}
+
+.Footer_Heading_Wrapper {
+  padding-top: 98px;
+}
+.Footer_Address {
+  padding-top: 40px;
+  padding-bottom: 96px;
+}
+
+@keyframes homePagetext {
+  0% {
+    z-index: -2;
+  }
+
+  100% {
+    z-index: 1;
+  }
+}
+
+.homepage_guide_text {
+  position: relative;
+  z-index: -2;
+  animation-name: homePagetext;
+  animation-duration: 2s;
+  animation-delay: 5.25s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes homePage_upsmile {
+  0% {
+    margin-top: -20%;
+  }
+
+  100% {
+    margin-top: 0%;
+  }
+}
+
+.hompage_upsmile_img {
+  margin-top: -20%;
+  animation-name: homePage_upsmile;
+  animation-duration: 1.5s;
+  animation-delay: 4.75s;
+  animation-fill-mode: forwards;
+}
+
+.HomePage_animated_text_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 41.22%;
+}
+
+/* 
+===========================Vision Component Css============================= */
+.Vision_Section {
+  background: #fff99a;
+}
+
+/* 
+===========================Mission Component Css============================= */
+.Mission_Section {
+  background: #abe7ff;
+}
+
+.Portfolio_Section {
+  background: #000000;
+}
+
+.Join_Section {
+  background-image: url("../Resources/Images/Homepage/Join_bg_pic.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.Join_Section_Wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow-y: scroll;
+}
+
+.careers_section_img > img {
+  margin-left: 16px;
+}
+
+.Horizontal_Line_Footer {
+  width: 574px;
+  border-bottom: 1px solid #000000;
+  padding-top: -10px;
+}
+
+@media only screen and (max-width: 1439px) {
+}
+@media only screen and (max-width: 1200px) {
+}
+@media only screen and (max-width: 992px) {
+}
+@media only screen and (max-width: 768px) {
+}
+@media only screen and (max-width: 576px) {
+}
