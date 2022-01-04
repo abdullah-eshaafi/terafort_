@@ -34,7 +34,7 @@ function HomePage() {
       <div className="HomePage_wrapper">
         <div className="Page1">
           <video autoPlay muted id="Homepage_video">
-            <source src={HomePage_video} type="video/mp4"></source>
+            <source src={HomePage_video} type="video/mp4" />
           </video>
           <div className="HomePage_animated_text_wrapper">
             <div>
