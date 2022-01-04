@@ -17,6 +17,9 @@ import About_Right_Arrow from "../Resources/Images/Homepage/HomePage_Right_Arrow
 
 import Navbar from "../Components/Navbar";
 import SectionHeading from "../Components/SectionHeading";
+
+import Fade from "react-reveal/Fade";
+import Slide from "react-reveal/Slide";
 function About() {
   const [currentIndex, setcurrentIndex] = useState(0);
 
@@ -79,33 +82,47 @@ function About() {
                       className="d-flex justify-content-lg-end justify-content-center"
                     >
                       <div className="CEO_About_Img_Wrapper">
-                        <img src={CEO_About} alt="..." className="img-fluid" />
+                        <Fade top delay={500} distance={"20%"}>
+                          <img
+                            src={CEO_About}
+                            alt="..."
+                            className="img-fluid"
+                          />
+                        </Fade>
                       </div>
                     </Col>
                     <Col lg={6}>
                       <div className="CEO_About_Text_Wrapper">
                         <div className="col-lg-8">
                           <div className="about_message_text_section">
-                            <h5 className="size_32 line-56 text_black_dark">
-                              CEO’s Message
-                            </h5>
+                            <Fade top delay={500} distance={"20%"}>
+                              {" "}
+                              <h5 className="size_32 line-56 text_black_dark">
+                                CEO’s Message
+                              </h5>
+                            </Fade>
                           </div>
                           <div className="CEO_About_Para1">
-                            <p className="size_16 line-28 text_black_dark">
-                              Our resolve to make lives better and contribute to
-                              humanity, makes us more than just a company. The
-                              commitment we have towards people makes us a big
-                              family of people coming together to help one
-                              another achieve our goals and objectives.
-                            </p>
+                            <Fade top delay={500} distance={"20%"}>
+                              <p className="size_16 line-28 text_black_dark">
+                                Our resolve to make lives better and contribute
+                                to humanity, makes us more than just a company.
+                                The commitment we have towards people makes us a
+                                big family of people coming together to help one
+                                another achieve our goals and objectives.
+                              </p>
+                            </Fade>
                           </div>
                           <div className="CEO_About_Para2">
-                            <p className="size_16 line-28 text_black_dark">
-                              This is easier than anyone would expect because of
-                              the open-mindedness of each member of this great
-                              family coupled with their qualities of being
-                              constructive, practical, and productive.
-                            </p>
+                            <Fade top delay={500} distance={"20%"}>
+                              {" "}
+                              <p className="size_16 line-28 text_black_dark">
+                                This is easier than anyone would expect because
+                                of the open-mindedness of each member of this
+                                great family coupled with their qualities of
+                                being constructive, practical, and productive.
+                              </p>
+                            </Fade>
                           </div>
                         </div>
                       </div>
@@ -118,28 +135,36 @@ function About() {
                   <Row>
                     <Col lg={7}>
                       <div className="About_Fountaion_Section_Container">
+                        {" "}
                         <div className="About_Fountaion_Wrapper">
                           <div className="About_Fountaion_Heading">
-                            <h1 className="size_120 line-145 letter-1_5 text_black_dark">
-                              Foundation
-                            </h1>
+                            {" "}
+                            <Fade top delay={500} distance={"20%"}>
+                              {" "}
+                              <h1 className="size_120 line-145 letter-1_5 text_black_dark">
+                                Foundation
+                              </h1>
+                            </Fade>
                           </div>
 
                           <div>
-                            <p className="size_24 line-40 letter_0_5 text_black_dark">
-                              Terafort as its name depicts is a fast-growing
-                              company, providing an invincible and protected
-                              career for its employees, whilst ensuring the
-                              happiness of every individual associated with the
-                              company. The company was established to guarantee
-                              the availability of quality and secured
-                              employment, especially to fresh graduates, and
-                              assist till they reach the peak of their career,
-                              hence enriching the quality of people's life. To
-                              Terafort, the welfare of the people being boosted
-                              and secured is of utmost importance and it's
-                              well-tended to.
-                            </p>
+                            <Fade top delay={500} distance={"20%"}>
+                              {" "}
+                              <p className="size_24 line-40 letter_0_5 text_black_dark">
+                                Terafort as its name depicts is a fast-growing
+                                company, providing an invincible and protected
+                                career for its employees, whilst ensuring the
+                                happiness of every individual associated with
+                                the company. The company was established to
+                                guarantee the availability of quality and
+                                secured employment, especially to fresh
+                                graduates, and assist till they reach the peak
+                                of their career, hence enriching the quality of
+                                people's life. To Terafort, the welfare of the
+                                people being boosted and secured is of utmost
+                                importance and it's well-tended to.
+                              </p>
+                            </Fade>
                           </div>
                         </div>
                       </div>
