@@ -66,6 +66,9 @@
 /* 
 Css For ResponsiveNess In Tablets */
 
+.typed-cursor {
+  opacity: 0 !important;
+}
 @media only screen and (max-width: 1439px) {
   .Who_section_main_text_cneter {
     width: 80%;

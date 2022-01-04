@@ -4,6 +4,8 @@ import LinkdIn_Icon from "../Resources/Images/About/LinkdIn_Icon.svg";
 import Twitter_Icon from "../Resources/Images/About/Twitter_Icon.svg";
 import Down_Arrow from "../Resources/Images/About/Down_Arrow.svg";
 import Vision_Line_HomePage from "../Resources/Images/Homepage/Vision_Line_HomePage.svg";
+
+import Typed from "react-typed";
 function SectionHeading({ title, find, Us, here }) {
   return (
     <div>
@@ -11,7 +13,7 @@ function SectionHeading({ title, find, Us, here }) {
         <div className="about_section_heading d-flex">
           <div style={{ position: "relative" }} className="d-flex">
             <h2 className="size_225 line-272 letter-1_5 text_black_dark">
-              {title}
+              <Typed strings={[title]} typeSpeed={180} />
             </h2>
             <h2
               className="size_52 letter-1_5 text_black_dark line-52"
