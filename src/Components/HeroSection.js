@@ -33,7 +33,7 @@ function Section({
       </div>
       <div className="Who_section_wrapper">
         <div className="Who_section_bg_text line-272">
-          <Fade top duration={1500}>
+          <Fade top duration={1200} delay={700}>
             <h2
               className={`size_225 letter-1_5 ${BgHeadingClass}`}
               data-aos="flip-left"
@@ -47,12 +47,12 @@ function Section({
             className="Who_section_main_text_cneter"
             style={{ marginTop: marginTop }}
           >
-            <Fade bottom duration={1500} delay={1200}>
+            <Fade bottom duration={1200} delay={1200}>
               <p className="size_32 line-56 text_black_dark WhoMAINtext">
                 {MainText}
               </p>
             </Fade>
-            <Fade left duration={1500} delay={2000}>
+            <Fade left duration={1500} delay={2000} distance={"20%"}>
               <div className="about_text_section">
                 <div className="d-flex">
                   <div>

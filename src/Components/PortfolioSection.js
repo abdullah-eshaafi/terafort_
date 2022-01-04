@@ -1,12 +1,15 @@
 import React from "react";
 import "./PortfolioSection.css";
 
-import LightSpeed from "react-reveal/LightSpeed";
+
 
 import White_Vertical_Line from "../Resources/Images/Homepage/White_Vertical_Line.png";
 import { Container, Row, Col } from "react-bootstrap";
 
 import Zoom from "react-reveal/Zoom";
+
+import Fade from "react-reveal/Fade";
+
 function PortfolioSection({
   PortfolioImage,
   PortfolioText,
@@ -33,16 +36,15 @@ function PortfolioSection({
                 </Zoom>
               </div>
             </div>
-            <Zoom left cascade delay={1000} duration={500}>
+            <Fade bottom cascade delay={1000} duration={500}>
               <div className="Eshaafi_Portfolio_heading_Section">
-                {" "}
                 <h1
                   className={`size_225 ${line} letter-1_5 text_white text-center`}
                 >
                   {PortfolioText}
                 </h1>{" "}
               </div>
-            </Zoom>
+            </Fade>
           </div>
         </Col>
       </Row>

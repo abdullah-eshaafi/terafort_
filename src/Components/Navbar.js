@@ -30,7 +30,7 @@ function Navbar() {
           ></img>
         </div>
       </div>
-      <Fade collapse when={showNavbar}>
+      <Fade right collapse when={showNavbar}>
         <div
           className="Navbar_Content_wrapper"
           style={{ display: showNavbar ? showNavbar : "none" }}
@@ -43,10 +43,18 @@ function Navbar() {
               <li>
                 <Link to="/about">About Us</Link>
               </li>
-              <li>Careers</li>
-              <li>Portfolio</li>
-              <li>Gallery</li>
-              <li>Contact Us</li>
+              <li>
+                <Link to="/career">Careers</Link>
+              </li>
+              <li>
+                <Link to="/portfolio">Portfolio</Link>
+              </li>
+              <li>
+                <Link to="/gallery">Gallery</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact Us</Link>
+              </li>
             </ul>
             <div className="Terafort_Bg_logo">
               <img src={Terafort_Bg_logo} alt="..."></img>
