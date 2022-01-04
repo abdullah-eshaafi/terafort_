@@ -83,10 +83,6 @@ p {
   line-height: 97px;
 }
 
-.line-272 {
-  line-height: 272px;
-}
-
 .line-180 {
   line-height: 180px;
 }
@@ -172,11 +168,14 @@ p {
 /* 
 Css For ResponsiveNess In Tablets */
 
-@media only screen and (max-width: 1439px) {
+@media only screen and (max-width: 1440px) {
+  .size_225 {
+    font-size: 190px;
+  }
 }
 @media only screen and (max-width: 1200px) {
   .size_225 {
-    font-size: 190px;
+    font-size: 170px;
   }
 }
 @media only screen and (max-width: 992px) {
@@ -189,7 +188,14 @@ Css For ResponsiveNess In Tablets */
     font-size: 60px;
   }
   .size_225 {
-    font-size: 110px;
+    font-size: 100px;
+  }
+
+  .size_32 {
+    font-size: 26px;
+  }
+  .line-56 {
+    line-height: 40px;
   }
 }
 @media only screen and (max-width: 576px) {
@@ -203,7 +209,7 @@ Css For ResponsiveNess In Tablets */
     line-height: 40px;
   }
   .line-180 {
-    line-height: 120px;
+    line-height: 100px;
   }
 
   .size_120 {
@@ -221,5 +227,45 @@ Css For ResponsiveNess In Tablets */
   }
   .line-120 {
     line-height: 70px;
+  }
+  .line-272 {
+    line-height: 120px;
+  }
+  .size_225 {
+    font-size: 65px;
+    text-align: center;
+  }
+
+  .size_16 {
+    font-size: 12px;
+  }
+  .line-56 {
+    line-height: 30px;
+  }
+
+  .Careers_Apply_text {
+    margin-top: 0px;
+  }
+}
+
+@media only screen and (max-height: 600px) {
+  .size_16 {
+    font-size: 10px;
+  }
+
+  .line-28 {
+    line-height: 16px;
+  }
+  .line-40 {
+    line-height: 22px;
+  }
+  .line-56 {
+    line-height: 30px;
+  }
+  .size_32 {
+    font-size: 20px;
+  }
+  .size_225 {
+    font-size: 100px;
   }
 }

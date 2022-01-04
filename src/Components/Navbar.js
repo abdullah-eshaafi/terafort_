@@ -35,10 +35,14 @@ function Navbar() {
           className="Navbar_Content_wrapper"
           style={{ display: showNavbar ? showNavbar : "none" }}
         >
-          <div>
+          <div className="Navbar_List_Container">
             <ul className="Navabar_List_Wrapper">
-              <li>Home</li>
-              <li>About Us</li>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/about">About Us</Link>
+              </li>
               <li>Careers</li>
               <li>Portfolio</li>
               <li>Gallery</li>

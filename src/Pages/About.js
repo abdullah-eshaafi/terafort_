@@ -65,11 +65,14 @@ function About() {
       <Row>
         <Col>
           <div className="About_Main_Container_wrapper">
-            <SectionHeading title="About Us"/>
+            <SectionHeading title="About Us" />
             <div className="Page3">
               <Container>
                 <Row>
-                  <Col lg={6} className="d-flex justify-content-end">
+                  <Col
+                    lg={6}
+                    className="d-flex justify-content-lg-end justify-content-center"
+                  >
                     <div className="CEO_About_Img_Wrapper">
                       <img src={CEO_About} alt="..." className="img-fluid" />
                     </div>
@@ -144,7 +147,7 @@ function About() {
                   <Col>
                     <Row>
                       <Col lg={4}>
-                        <div className="d-flex About_Values_Main_Container">
+                        <div className="d-md-flex About_Values_Main_Container">
                           <div className="col-lg-6">
                             <h5 className="size_32 line-56 text_white">
                               Our Values
@@ -182,7 +185,7 @@ function About() {
                     <Row>
                       <Col style={{ height: "236px" }}>
                         <div className="col-lg-12 d-flex">
-                          <div className="col-lg-4">
+                          <div className="col-lg-4 Last_Index_Slider">
                             {items.map((item, index) => (
                               <div className="text_Wrapper_slider" key={index}>
                                 {index === LastIndex && (
@@ -225,7 +228,7 @@ function About() {
                               </div>
                             ))}
                           </div>
-                          <div className="col-lg-4">
+                          <div className="col-lg-4 Last_Index_Slider">
                             {items.map((item, index) => (
                               <div
                                 className="Slider_First_ItemSecond col-lg-12 d-flex justify-content-end"
@@ -254,11 +257,8 @@ function About() {
                       </Col>
                     </Row>
                     <Row>
-                      <Col
-                        className="d-flex"
-                        className="Sluider_conting_wrappers"
-                      >
-                        <div className="Slider_Counting_Numbers col-lg-7 d-flex justify-content-end">
+                      <Col className="d-flex Sluider_conting_wrappers">
+                        <div className="Slider_Counting_Numbers col-lg-7 d-flex justify-content-lg-end justify-content-center">
                           <button className="no_btn" onClick={handlePrev}>
                             <img src={HomePage_Left_Arrow} alt="..." />
                           </button>
@@ -297,7 +297,7 @@ function About() {
                       <div className="Join_Section_About_text">
                         <div className="col-md-12">
                           <p className="size_32 line-56">
-                            Creators, makers, innovators...{" "}
+                            Creators, makers, innovators...
                           </p>
                         </div>
                         <div className="col-md-8">
@@ -314,7 +314,7 @@ function About() {
                     <Col>
                       <div className="about_career_section d-flex">
                         <h6 className="size_16 line-24">Careers</h6>
-                        <img src={About_Right_Arrow} alt="..." />{" "}
+                        <img src={About_Right_Arrow} alt="..." />
                       </div>
                     </Col>
                   </Row>

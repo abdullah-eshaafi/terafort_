@@ -45,7 +45,6 @@ function Careers() {
                   <div className="facilities_list">
                     <ul>
                       <li className="size_16 line-28 text_black_dark">
-                   
                         All needed infrastructure in place
                       </li>
                       <li className="size_16 line-28 text_black_dark">
@@ -143,7 +142,7 @@ function Careers() {
           ))}
         </Container>
       </div>
-      <div className="page5 About_Departments_wrapper text-center">
+      <div className="page5 About_Departments_wrapper  text-center">
         <Container>
           <Row className="About_Departments_Container">
             <Col lg={9} className="my-auto mx-auto">
@@ -180,7 +179,7 @@ function Careers() {
                 </div>
               </div>
 
-              <div className="d-flex About_Departments_Wrapper">
+              <div className="d-flex About_Departments_Wrapper justify-content-center">
                 <div className="col-lg-4">
                   <div>
                     <img src={d_modeling} alt="..." />

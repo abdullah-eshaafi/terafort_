@@ -98,3 +98,27 @@
 #send_msg_btn > img {
   padding-left: 12px;
 }
+
+@media only screen and (max-width: 1439px) {
+}
+@media only screen and (max-width: 1200px) {
+}
+@media only screen and (max-width: 992px) {
+}
+@media only screen and (max-width: 768px) {
+}
+@media only screen and (max-width: 576px) {
+  .contact_Lahore_heading {
+    position: absolute;
+    top: 17.8%;
+    left: 28%;
+  }
+}
+
+@media only screen and (max-height: 600px) {
+  .contact_Lahore_heading {
+    position: absolute;
+    top: 17.8%;
+    left: 12%;
+  }
+}

@@ -7,6 +7,8 @@
 .Nabar_main_wrapper {
   display: flex;
   justify-content: space-between;
+  position: relative;
+  z-index: 99999;
 }
 .Navbar_Content_wrapper {
   position: absolute;
@@ -15,7 +17,7 @@
   height: 100vh;
   width: 100vw;
   background: #000000;
-  z-index: -1;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,12 +29,20 @@
   font-weight: normal;
   font-size: 32px;
   line-height: 48px;
-  /* text-align: center; */
+  text-align: center;
   letter-spacing: 4px;
   color: #ffffff;
   margin: 24px 0px;
   position: relative;
   z-index: 99999;
+}
+.Navabar_List_Wrapper > li > a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.Navbar_List_Container {
+  position: relative;
+  z-index: 9999;
 }
 .Terafort_Bg_logo {
   position: absolute;

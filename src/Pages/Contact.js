@@ -10,7 +10,7 @@ function Contact() {
   return (
     <div className="Conatct_wrapper">
       <div className="Page10">
-        <SectionHeading title="Hi" />
+        <SectionHeading title="Hi" find="Find" Us="Us" here="here" />
       </div>
       <div className="Page10 d-flex align-content-center Lahore_Container">
         <Container fluid className="px-0">

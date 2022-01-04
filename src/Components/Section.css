@@ -111,4 +111,8 @@ Css For ResponsiveNess In Tablets */
   .about_text_section {
     margin-top: 40px;
   }
+  #chalo {
+    position: relative;
+    top: 24px;
+  }
 }
