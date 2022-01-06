@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from "react";
+
 import "./App.css";
 
 //Bootstrap Link
@@ -11,20 +13,28 @@ import Portfolio from "./Pages/Portfolio.js";
 import Careers from "./Pages/Careers";
 import Contact from "./Pages/Contact";
 import Gallery from "./Pages/Gallery";
-
 function App() {
+  const [loader, setLoader] = useState(true);
+
+  useEffect(() => {
+    setLoader(false);
+  }, []);
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/Career" element={<Careers />} />
-          <Route path="/Contact" element={<Contact />} />
-          <Route path="/Gallery" element={<Gallery />} />
-        </Routes>
-      </BrowserRouter>
+      {!loader ? (
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/Career" element={<Careers />} />
+            <Route path="/Contact" element={<Contact />} />
+            <Route path="/Gallery" element={<Gallery />} />
+          </Routes>
+        </BrowserRouter>
+      ) : (
+        <h1>hello</h1>
+      )}
     </>
   );
 }
