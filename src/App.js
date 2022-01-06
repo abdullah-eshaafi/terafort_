@@ -21,20 +21,16 @@ function App() {
   }, []);
   return (
     <>
-      {!loader ? (
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/Career" element={<Careers />} />
-            <Route path="/Contact" element={<Contact />} />
-            <Route path="/Gallery" element={<Gallery />} />
-          </Routes>
-        </BrowserRouter>
-      ) : (
-        <h1>hello</h1>
-      )}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/Career" element={<Careers />} />
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/Gallery" element={<Gallery />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

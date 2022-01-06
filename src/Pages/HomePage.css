@@ -45,7 +45,7 @@
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  /* background-color: black; */
+  background-color: black;
   background-size: cover;
 }
 
@@ -121,6 +121,15 @@
   justify-content: center;
   position: absolute;
   top: 41.22%;
+}
+
+.onboradingScreenWrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
 }
 
 /* 

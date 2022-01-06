@@ -4,7 +4,7 @@ import "./HomePage.css";
 import { Container, Row, Col } from "react-bootstrap";
 
 //HomePage Video and Images
-import HomePage_video from "../Resources/Images/Homepage/Homepage_video.mp4";
+
 import Navbar from "../Components/Navbar";
 import HomePage_uparrow from "../Resources/Images/Homepage/HomePage_uparrow.svg";
 import HomePage_upsmile from "../Resources/Images/Homepage/HomePage_upsmile.svg";
@@ -31,7 +31,7 @@ import side_menu from "../Resources/Images/Homepage/side_menu.svg";
 import Bar_white from "../Resources/Images/Homepage/Bar_white.svg";
 
 import { useInView } from "react-intersection-observer";
-
+import Zoom from "react-reveal/Zoom";
 function HomePage() {
   const [loader, setLoader] = useState(true);
 
@@ -41,7 +41,7 @@ function HomePage() {
   const [section4Ref, section4InView] = useInView({ threshold: 0.5 });
 
   useEffect(() => {
-    setLoader(false);
+    setTimeout(() => setLoader(false), 4000);
   }, []);
 
   return (
@@ -293,7 +293,13 @@ function HomePage() {
           </div>
         </>
       ) : (
-        <h1>Loading...</h1>
+        <div className="onboradingScreenWrapper">
+          <div>
+            <Zoom top cascade duration={2000} delay={500}>
+              <img src={terafort_logo} alt="..."></img>
+            </Zoom>
+          </div>
+        </div>
       )}
     </>
   );
