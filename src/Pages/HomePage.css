@@ -65,8 +65,8 @@
   top: 0;
   left: 42%;
   animation-name: homePagePic;
-  animation-duration: 1.5s;
-  animation-delay: 4.75s;
+  animation-duration: 1s;
+  animation-delay: 3.5s;
   animation-fill-mode: forwards;
 }
 
@@ -92,8 +92,8 @@
   position: relative;
   z-index: -2;
   animation-name: homePagetext;
-  animation-duration: 2s;
-  animation-delay: 5.25s;
+  animation-duration: 1s;
+  animation-delay: 3.5s;
   animation-fill-mode: forwards;
 }
 
@@ -110,8 +110,8 @@
 .hompage_upsmile_img {
   margin-top: -20%;
   animation-name: homePage_upsmile;
-  animation-duration: 1.5s;
-  animation-delay: 4.75s;
+  animation-duration: 1s;
+  animation-delay: 3.5s;
   animation-fill-mode: forwards;
 }
 

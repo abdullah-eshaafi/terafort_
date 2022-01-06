@@ -8,17 +8,54 @@ import Cuptie_portfolio_img from "../Resources/Images/Homepage/Cuptie_portfolio_
 import Aurilian_portfolio_site from "../Resources/Images/Homepage/Aurilian_portfolio_site.png";
 import Navbar from "../Components/Navbar";
 import { Container, Row, Col } from "react-bootstrap";
+
+import terafort_logo from "../Resources/Images/Homepage/terafort_logo.svg";
+import Tera_White from "../Resources/Images/Homepage/Tera_White.svg";
+
+import side_menu from "../Resources/Images/Homepage/side_menu.svg";
+import Bar_white from "../Resources/Images/Homepage/Bar_white.svg";
+
+import { useInView } from "react-intersection-observer";
+
 function Portfolio() {
+  const [section1Ref, section1InView] = useInView({ threshold: 0.5 });
+  const [section2Ref, section2InView] = useInView({ threshold: 0.5 });
+  const [section3Ref, section3InView] = useInView({ threshold: 0.5 });
+  const [section4Ref, section4InView] = useInView({ threshold: 0.5 });
+
   return (
     <>
       <div className="HomePage-navbar-wrapper">
-        <Navbar />
+        <Navbar
+          src={
+            section1InView
+              ? Tera_White
+              : section2InView
+              ? Tera_White
+              : section3InView
+              ? Tera_White
+              : section4InView
+              ? Tera_White
+              : terafort_logo
+          }
+          img={
+            section1InView
+              ? Bar_white
+              : section2InView
+              ? Bar_white
+              : section3InView
+              ? Bar_white
+              : section4InView
+              ? Bar_white
+              : side_menu
+          }
+        />
       </div>
       <div className="HomePage_wrapper">
         <div className="Page1">
           <SectionHeading title="Portfolio" />
         </div>
-        <div className="Page1 Portfolio_Section">
+        <div className="Page1 Portfolio_Section" ref={section1Ref}>
           <PortfolioSection
             PortfolioImage={Eshaafi_Portfolio_Img}
             PortfolioText="eShaafi"
@@ -44,7 +81,7 @@ function Portfolio() {
             TagLineSpacing="Potfolio_PortFolioLine_Section"
           />
         </div>
-        <div className="Page1 Portfolio_Section">
+        <div className="Page1 Portfolio_Section" ref={section2Ref}>
           <PortfolioSection
             PortfolioImage={Cuptie_portfolio_img}
             PortfolioText="Cuptie"
@@ -65,7 +102,7 @@ function Portfolio() {
             TagLineSpacing="Potfolio_PortFolioLine_Section"
           />
         </div>
-        <div className="Page1 Portfolio_Section">
+        <div className="Page1 Portfolio_Section" ref={section3Ref}>
           <PortfolioSection
             PortfolioImage={Aurilian_portfolio_site}
             PortfolioText="Aurelian Origins"

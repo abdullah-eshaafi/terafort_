@@ -20,19 +20,25 @@ import Cuptie_portfolio_img from "../Resources/Images/Homepage/Cuptie_portfolio_
 import Aurilian_portfolio_site from "../Resources/Images/Homepage/Aurilian_portfolio_site.png";
 
 import careers_arrow from "../Resources/Images/Homepage/careers_arrow.svg";
-//ReuseAble Components
 import Section from "../Components/HeroSection";
 import PortfolioSection from "../Components/PortfolioSection";
 import PortfolioTextSection from "../Components/PortfolioTextSection";
 
-// import '~video-react/dist/video-react.css';
-// import { Player } from 'video-react';
+import terafort_logo from "../Resources/Images/Homepage/terafort_logo.svg";
+import Tera_White from "../Resources/Images/Homepage/Tera_White.svg";
+
+import side_menu from "../Resources/Images/Homepage/side_menu.svg";
+import Bar_white from "../Resources/Images/Homepage/Bar_white.svg";
+
+import { useInView } from "react-intersection-observer";
 
 function HomePage() {
   const [loader, setLoader] = useState(true);
-  const divRef = useRef(null);
-  const scrollToRef = (divRef) => window.scrollTo(0, divRef.current.offsetTop);
-  console.log(scrollToRef);
+
+  const [section1Ref, section1InView] = useInView({ threshold: 0.5 });
+  const [section2Ref, section2InView] = useInView({ threshold: 0.5 });
+  const [section3Ref, section3InView] = useInView({ threshold: 0.5 });
+  const [section4Ref, section4InView] = useInView({ threshold: 0.5 });
 
   useEffect(() => {
     setLoader(false);
@@ -43,7 +49,28 @@ function HomePage() {
       {!loader ? (
         <>
           <div className="HomePage-navbar-wrapper">
-            <Navbar />
+            <Navbar
+              src={
+                section1InView
+                  ? Tera_White
+                  : section2InView
+                  ? Tera_White
+                  : section3InView
+                  ? Tera_White
+                  : section4InView
+                  ? Tera_White
+                  : terafort_logo
+              }
+              img={ section1InView
+                ? Bar_white
+                : section2InView
+                ? Bar_white
+                : section3InView
+                ? Bar_white
+                : section4InView
+                ? Bar_white
+                : side_menu}
+            />
           </div>
           <div className="HomePage_wrapper">
             <div className="Page1">
@@ -85,7 +112,7 @@ function HomePage() {
                 marginTop="0px"
               />
             </div>
-            <div className="Page1 Vision_Section" ref={divRef}>
+            <div className="Page1 Vision_Section">
               <Section
                 BgHeading="Vision"
                 MainText="Providing solutions through technology, with the goal of promoting
@@ -95,6 +122,8 @@ function HomePage() {
                 marginTop="0px"
               />
             </div>
+            {/* 
+            ref={section2Ref} */}
             <div className="Page1 Mission_Section">
               <div>
                 <Section
@@ -109,7 +138,7 @@ function HomePage() {
                 />
               </div>
             </div>
-            <div className="Page1 Portfolio_Section">
+            <div className="Page1 Portfolio_Section" ref={section2Ref}>
               <div>
                 <PortfolioSection
                   PortfolioImage={Eshaafi_Portfolio_Img}
@@ -143,7 +172,7 @@ function HomePage() {
                 </Row>
               </Container>
             </div>
-            <div className="Page1 Portfolio_Section">
+            <div className="Page1 Portfolio_Section" ref={section1Ref}>
               <div>
                 <PortfolioSection
                   PortfolioImage={Cuptie_portfolio_img}
@@ -172,7 +201,7 @@ function HomePage() {
                 </Row>
               </Container>
             </div>
-            <div className="Page1 Portfolio_Section">
+            <div className="Page1 Portfolio_Section" ref={section4Ref}>
               <div>
                 <PortfolioSection
                   PortfolioImage={Aurilian_portfolio_site}
@@ -204,7 +233,7 @@ function HomePage() {
                 </Row>
               </Container>
             </div>
-            <div className="Page1 Join_Section">
+            <div className="Page1 Join_Section" ref={section3Ref}>
               <div className="Join_Section_Wrapper">
                 <div
                   claasName="Join_Section_last_Wrapper"
@@ -259,7 +288,7 @@ function HomePage() {
           </div>
         </>
       ) : (
-        <h1>Hello</h1>
+        <h1>Loading...</h1>
       )}
     </>
   );

@@ -20,7 +20,18 @@ import SectionHeading from "../Components/SectionHeading";
 
 import Fade from "react-reveal/Fade";
 import Slide from "react-reveal/Slide";
+
+import terafort_logo from "../Resources/Images/Homepage/terafort_logo.svg";
+import Tera_White from "../Resources/Images/Homepage/Tera_White.svg";
+
+import side_menu from "../Resources/Images/Homepage/side_menu.svg";
+import Bar_white from "../Resources/Images/Homepage/Bar_white.svg";
+
+import { useInView } from "react-intersection-observer";
+
 function About() {
+  const [section1Ref, section1InView] = useInView({ threshold: 0.5 });
+
   const [currentIndex, setcurrentIndex] = useState(0);
 
   const [items, setItems] = useState([
@@ -67,7 +78,10 @@ function About() {
   return (
     <>
       <div className="HomePage-navbar-wrapper">
-        <Navbar />
+        <Navbar
+          src={section1InView ? Tera_White : terafort_logo}
+          img={section1InView ? Bar_white : side_menu}
+        />
       </div>
       <Container fluid className="About_Container_Wrapper px-0">
         <Row>
@@ -172,7 +186,7 @@ function About() {
                   </Row>
                 </Container>
               </div>
-              <div className="Page3 About_Values_Section">
+              <div className="Page3 About_Values_Section" ref={section1Ref}>
                 <Container>
                   <Row>
                     <Col>

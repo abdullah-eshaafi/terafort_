@@ -1,17 +1,15 @@
 import React, { useState } from "react";
-import terafort_logo from "../Resources/Images/Homepage/terafort_logo.svg";
+
 import side_menu from "../Resources/Images/Homepage/side_menu.svg";
 
 import Terafort_Bg_logo from "../Resources/Images/Homepage/Terafort_Bg_logo.png";
 import cross_logo_terafort from "../Resources/Images/Homepage/cross_logo_terafort.svg";
 
-import Tera_White from "../Resources/Images/Homepage/Tera_White.svg";
-
 import "./Navbar.css";
 import Fade from "react-reveal/Fade";
 import { Link } from "react-router-dom";
 
-function Navbar() {
+function Navbar({ src, img }) {
   const [showNavbar, setSHowNavbar] = useState(false);
 
   const handleShowNavabar = () => {
@@ -22,14 +20,11 @@ function Navbar() {
       <div className="Nabar_main_wrapper">
         <div>
           <Link to="/">
-            <img src={showNavbar ? Tera_White : terafort_logo} alt="..."></img>
+            <img src={src} alt="..."></img>
           </Link>
         </div>
         <div onClick={handleShowNavabar}>
-          <img
-            src={showNavbar ? cross_logo_terafort : side_menu}
-            alt="..."
-          ></img>
+          <img src={showNavbar ? cross_logo_terafort : img} alt="..."></img>
         </div>
       </div>
       <Fade right collapse when={showNavbar}>

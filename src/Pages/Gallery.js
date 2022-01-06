@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import SectionHeading from "../Components/SectionHeading";
 import "./Gallery.css";
 import Careers_horizontal_Line from "../Resources/Images/Contact/Gallery_Horizontal_Line.svg";
 
-import Ceo from "../Resources/Images/Gallery/Ceo.jpg";
-import cake from "../Resources/Images/Gallery/cake.jpg";
 import { Container, Row, Col } from "react-bootstrap";
 
 import Navbar from "../Components/Navbar";
@@ -38,6 +36,14 @@ import fift from "../Resources/Images/Gallery/Large/15.png";
 
 import HomePage_Left_Arrow from "../Resources/Images/About/Left_Arrow.svg";
 import HomePage_Right_Arrow from "../Resources/Images/About/Right_Arrow.svg";
+
+import terafort_logo from "../Resources/Images/Homepage/terafort_logo.svg";
+import Tera_White from "../Resources/Images/Homepage/Tera_White.svg";
+
+import side_menu from "../Resources/Images/Homepage/side_menu.svg";
+import Bar_white from "../Resources/Images/Homepage/Bar_white.svg";
+
+import { useInView } from "react-intersection-observer";
 
 function Gallery() {
   const item = [
@@ -124,17 +130,43 @@ function Gallery() {
     setsecondIndex(secondIndex === item.length - 1 ? 0 : secondIndex + 1);
     setLastIndex(LastIndex === item.length - 1 ? 0 : LastIndex + 1);
   };
-
+  const [section1Ref, section1InView] = useInView({ threshold: 0.5 });
+  const [section2Ref, section2InView] = useInView({ threshold: 0.5 });
+  const [section3Ref, section3InView] = useInView({ threshold: 0.5 });
+  const [section4Ref, section4InView] = useInView({ threshold: 0.5 });
   return (
     <>
       <div className="HomePage-navbar-wrapper">
-        <Navbar />
+        <Navbar
+          src={
+            section1InView
+              ? Tera_White
+              : section2InView
+              ? Tera_White
+              : section3InView
+              ? Tera_White
+              : section4InView
+              ? Tera_White
+              : terafort_logo
+          }
+          img={
+            section1InView
+              ? Bar_white
+              : section2InView
+              ? Bar_white
+              : section3InView
+              ? Bar_white
+              : section4InView
+              ? Bar_white
+              : side_menu
+          }
+        />
       </div>
       <div className="Gallery_wrapper">
         <div className="Page12">
           <SectionHeading title="Gallery" />
         </div>
-        <div className="Page12 galeery_First_Wrapper">
+        <div className="Page12 galeery_First_Wrapper" ref={section1Ref}>
           <Container>
             <Row>
               <Col lg={8}>
@@ -203,7 +235,7 @@ function Gallery() {
             </Row>
           </div>
         </div>
-        <div className="Page12 galeery_First_Wrapper">
+        <div className="Page12 galeery_First_Wrapper" ref={section2Ref}>
           <Container>
             <Row>
               <Col lg={8}>

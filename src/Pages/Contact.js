@@ -7,17 +7,55 @@ import Badshahi_Masjid from "../Resources/Images/Contact/Badshahi_masijid.jpg";
 
 import Send_btn_Arroe from "../Resources/Images/Contact/Send_btn_Arroe.svg";
 import Navbar from "../Components/Navbar";
+
+import terafort_logo from "../Resources/Images/Homepage/terafort_logo.svg";
+import Tera_White from "../Resources/Images/Homepage/Tera_White.svg";
+
+import side_menu from "../Resources/Images/Homepage/side_menu.svg";
+import Bar_white from "../Resources/Images/Homepage/Bar_white.svg";
+
+import { useInView } from "react-intersection-observer";
 function Contact() {
+  const [section1Ref, section1InView] = useInView({ threshold: 0.5 });
+  const [section2Ref, section2InView] = useInView({ threshold: 0.5 });
+  const [section3Ref, section3InView] = useInView({ threshold: 0.5 });
+  const [section4Ref, section4InView] = useInView({ threshold: 0.5 });
   return (
     <>
       <div className="HomePage-navbar-wrapper">
-        <Navbar />
+        <Navbar
+          src={
+            section1InView
+              ? Tera_White
+              : section2InView
+              ? Tera_White
+              : section3InView
+              ? Tera_White
+              : section4InView
+              ? Tera_White
+              : terafort_logo
+          }
+          img={
+            section1InView
+              ? Bar_white
+              : section2InView
+              ? Bar_white
+              : section3InView
+              ? Bar_white
+              : section4InView
+              ? Bar_white
+              : side_menu
+          }
+        />
       </div>
       <div className="Conatct_wrapper">
         <div className="Page10">
           <SectionHeading title="Hi" find="Find" Us="Us" here="here" />
         </div>
-        <div className="Page10 d-flex align-content-center Lahore_Container">
+        <div
+          className="Page10 d-flex align-content-center Lahore_Container"
+          ref={section1Ref}
+        >
           <Container fluid className="px-0">
             <Row>
               <Col lg={7} className="d-flex align-items-center badShahi_mosque">

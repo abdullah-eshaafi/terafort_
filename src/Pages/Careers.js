@@ -22,12 +22,18 @@ import Navbar from "../Components/Navbar";
 
 import Send_btn_Arroe from "../Resources/Images/Contact/Send_btn_Arroe.svg";
 
+import terafort_logo from "../Resources/Images/Homepage/terafort_logo.svg";
+import Tera_White from "../Resources/Images/Homepage/Tera_White.svg";
+
+import side_menu from "../Resources/Images/Homepage/side_menu.svg";
+import Bar_white from "../Resources/Images/Homepage/Bar_white.svg";
+
 function Careers() {
   return (
     <>
       {" "}
       <div className="HomePage-navbar-wrapper">
-        <Navbar />
+        <Navbar src={terafort_logo} img={side_menu} />
       </div>
       <div className="Careers_Page_wrapper">
         <div className="page5">
