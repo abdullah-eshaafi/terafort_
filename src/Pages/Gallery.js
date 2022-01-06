@@ -189,7 +189,9 @@ function Gallery() {
             <div className="col-lg-12 d-flex align-items-center justify-content-around">
               <div className="col-lg-4 sm-first-wrapper">
                 {item.map((ite, index) => (
-                  <div>
+                  <div
+                    className={index === LastIndex ? "slide active" : "slide"}
+                  >
                     {index === LastIndex && (
                       <div className="sm-img">
                         <img src={ite.src} alt="..."></img>
@@ -200,7 +202,11 @@ function Gallery() {
               </div>
               <div className="col-lg-4 lg-first-wrapper">
                 {item.map((ite, index) => (
-                  <div>
+                  <div
+                    className={
+                      index === currentIndex ? "slide active" : "slide"
+                    }
+                  >
                     {index === currentIndex && (
                       <div className="sm-img">
                         <img src={ite.src} alt="..."></img>
@@ -211,7 +217,9 @@ function Gallery() {
               </div>
               <div className="col-lg-4 sm-first-wrapper">
                 {item.map((ite, index) => (
-                  <div>
+                  <div
+                    className={index === secondIndex ? "slide active" : "slide"}
+                  >
                     {index === secondIndex && (
                       <div className="sm-img">
                         <img src={ite.src} alt="..."></img>
@@ -258,7 +266,9 @@ function Gallery() {
             <div className="col-lg-12 d-flex align-items-center justify-content-around">
               <div className="col-lg-4 sm-first-wrapper">
                 {items.map((ite, index) => (
-                  <div>
+                  <div
+                    className={index === LastIndexs ? "slide active" : "slide"}
+                  >
                     {index === LastIndexs && (
                       <div className="sm-img">
                         <img src={ite.src} alt="..."></img>
@@ -269,7 +279,11 @@ function Gallery() {
               </div>
               <div className="col-lg-4 lg-first-wrapper">
                 {items.map((ite, index) => (
-                  <div>
+                  <div
+                    className={
+                      index === currentIndexs ? "slide active" : "slide"
+                    }
+                  >
                     {index === currentIndexs && (
                       <div className="sm-img">
                         <img src={ite.src} alt="..."></img>
@@ -280,7 +294,11 @@ function Gallery() {
               </div>
               <div className="col-lg-4 sm-first-wrapper">
                 {items.map((ite, index) => (
-                  <div>
+                  <div
+                    className={
+                      index === secondIndexs ? "slide active" : "slide"
+                    }
+                  >
                     {index === secondIndexs && (
                       <div className="sm-img">
                         <img src={ite.src} alt="..."></img>

@@ -182,6 +182,16 @@
   margin-left: 16px;
 }
 
+.slide {
+  opacity: 0;
+  transition-duration: 1s;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.01);
+}
 /* 
 
 .CEO_About_Text_Wrapper {

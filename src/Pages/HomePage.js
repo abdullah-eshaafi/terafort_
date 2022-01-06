@@ -32,6 +32,7 @@ import Bar_white from "../Resources/Images/Homepage/Bar_white.svg";
 
 import { useInView } from "react-intersection-observer";
 import Zoom from "react-reveal/Zoom";
+import axios from "axios";
 function HomePage() {
   const [loader, setLoader] = useState(true);
 
@@ -42,6 +43,12 @@ function HomePage() {
 
   useEffect(() => {
     setLoader(false);
+    axios
+      .get(
+        "https://terafort.s3.ap-southeast-1.amazonaws.com/Homepage_video.mp4"
+      )
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
   }, []);
 
   return (

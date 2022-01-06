@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./About.css";
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -238,6 +238,11 @@ function About() {
                                 <div
                                   className="text_Wrapper_slider"
                                   key={index}
+                                  className={
+                                    index === LastIndex
+                                      ? "slide active"
+                                      : "slide"
+                                  }
                                 >
                                   {index === LastIndex && (
                                     <div className="col-lg-12 Slider_First_Item">
@@ -245,7 +250,7 @@ function About() {
                                         <h5 className="size_32 line-56 slider_text_animate">
                                           {item.title}
                                         </h5>
-                                      </div>
+                                      </div>{" "}
                                       <div className="col-lg-10">
                                         <p className="size_16 line-28">
                                           {item.text}
@@ -256,11 +261,17 @@ function About() {
                                 </div>
                               ))}
                             </div>
+
                             <div className="col-lg-4">
                               {items.map((item, index) => (
                                 <div
                                   className="text_white col-lg-12 d-flex justify-content-center"
                                   key={index}
+                                  className={
+                                    index === currentIndex
+                                      ? "slide active"
+                                      : "slide"
+                                  }
                                 >
                                   {index === currentIndex && (
                                     <div className="col-lg-10">
@@ -284,6 +295,11 @@ function About() {
                                 <div
                                   className="Slider_First_ItemSecond col-lg-12 d-flex justify-content-end"
                                   key={index}
+                                  className={
+                                    index === secondIndex
+                                      ? "slide active"
+                                      : "slide"
+                                  }
                                 >
                                   {index === secondIndex && (
                                     <div className="col-lg-10">
