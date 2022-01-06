@@ -41,7 +41,7 @@ function HomePage() {
   const [section4Ref, section4InView] = useInView({ threshold: 0.5 });
 
   useEffect(() => {
-    setTimeout(() => setLoader(false), 4000);
+    setLoader(false);
   }, []);
 
   return (
