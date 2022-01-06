@@ -3,7 +3,17 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+#Homepage_video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  background-color: black;
+  background-size: cover;
+}
 .HomePage_wrapper {
   width: 100vw;
   height: 100vh;
@@ -35,18 +45,6 @@
 }
 .who_we_are_section {
   background: #ffffff;
-}
-
-#Homepage_video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  background-color: black;
-  background-size: cover;
 }
 
 @keyframes homePagePic {
