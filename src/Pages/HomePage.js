@@ -61,21 +61,26 @@ function HomePage() {
                   ? Tera_White
                   : terafort_logo
               }
-              img={ section1InView
-                ? Bar_white
-                : section2InView
-                ? Bar_white
-                : section3InView
-                ? Bar_white
-                : section4InView
-                ? Bar_white
-                : side_menu}
+              img={
+                section1InView
+                  ? Bar_white
+                  : section2InView
+                  ? Bar_white
+                  : section3InView
+                  ? Bar_white
+                  : section4InView
+                  ? Bar_white
+                  : side_menu
+              }
             />
           </div>
           <div className="HomePage_wrapper">
             <div className="Page1">
               <video autoPlay muted id="Homepage_video">
-                <source src={HomePage_video} type="video/mp4" />
+                <source
+                  src="https://terafort.s3.ap-southeast-1.amazonaws.com/Homepage_video.mp4"
+                  type="video/mp4"
+                />
               </video>
               <div className="HomePage_animated_text_wrapper">
                 <div>
