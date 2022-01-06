@@ -5,6 +5,8 @@ import side_menu from "../Resources/Images/Homepage/side_menu.svg";
 import Terafort_Bg_logo from "../Resources/Images/Homepage/Terafort_Bg_logo.png";
 import cross_logo_terafort from "../Resources/Images/Homepage/cross_logo_terafort.svg";
 
+import Tera_White from "../Resources/Images/Homepage/Tera_White.svg";
+
 import "./Navbar.css";
 import Fade from "react-reveal/Fade";
 import { Link } from "react-router-dom";
@@ -20,7 +22,7 @@ function Navbar() {
       <div className="Nabar_main_wrapper">
         <div>
           <Link to="/">
-            <img src={terafort_logo} alt="..."></img>
+            <img src={showNavbar ? Tera_White : terafort_logo} alt="..."></img>
           </Link>
         </div>
         <div onClick={handleShowNavabar}>

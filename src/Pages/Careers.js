@@ -20,6 +20,8 @@ import { CareerData } from "../Components/CareerData.js";
 
 import Navbar from "../Components/Navbar";
 
+import Send_btn_Arroe from "../Resources/Images/Contact/Send_btn_Arroe.svg";
+
 function Careers() {
   return (
     <>
@@ -261,13 +263,67 @@ function Careers() {
         <div className="page8">
           <Container>
             <Row className="d-flex justify-content-center">
-              <Col lg={5}>
-                <div className="Apply_job">
-                  <input type="text" placeholder="Name" />
+              <Col md={12}>
+                <div className="d-flex justify-content-center contact_form_input">
+                  <div className="col-md-6">
+                    <input type="text" placeholder="Full Name" />
+                  </div>
+                </div>
+                <div className="d-flex justify-content-center contact_form_input">
+                  <div className="col-md-6">
+                    <input type="text" placeholder="Email" />
+                  </div>
+                </div>
+                <div className="d-flex justify-content-center contact_form_input">
+                  <div className="col-md-6">
+                    <input type="text" placeholder="Phone Number" />
+                  </div>
+                </div>
+                <div className="d-flex justify-content-center contact_form_input">
+                  <div className="col-md-6">
+                    <textarea type="text" placeholder="Your Message" />
+                  </div>
+                </div>
+                <div className="d-flex justify-content-center ">
+                  <div className="col-md-6">
+                    <button type="submit" id="send_msg_btn">
+                      Send <img src={Send_btn_Arroe} alt="..."></img>
+                    </button>
+                  </div>
                 </div>
               </Col>
             </Row>
           </Container>
+          <div className="Footer Page2">
+            <Container>
+              <Row>
+                <Col>
+                  <div className="d-flex justify-content-between Footer_Heading_Wrapper">
+                    <div>
+                      <h5 className="size_24 line-36">Terafort</h5>
+                    </div>
+                    <div className="Horizontal_Line_Footer"></div>
+                    <div>
+                      <h5 className="size_24 line-36">contact@terafort.com</h5>
+                    </div>
+                  </div>
+                  <div className="d-flex justify-content-between Footer_Address">
+                    <div className="col-md-3">
+                      <h5 className="size_24 line-36 letter_0_5 text_black_666">
+                        Terafort, Third Floor, The Plaza 100, MM Alam Road,
+                        Lahore
+                      </h5>
+                    </div>
+                    <div>
+                      <h5 className="size_24 line-36 letter_0_5 text_black_666">
+                        +92 301 1166 523
+                      </h5>
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+            </Container>
+          </div>
         </div>
       </div>
     </>

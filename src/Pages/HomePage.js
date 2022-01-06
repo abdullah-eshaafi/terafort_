@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 //HomePage CSS
 import "./HomePage.css";
 import { Container, Row, Col } from "react-bootstrap";
@@ -30,6 +30,9 @@ import PortfolioTextSection from "../Components/PortfolioTextSection";
 
 function HomePage() {
   const [loader, setLoader] = useState(true);
+  const divRef = useRef(null);
+  const scrollToRef = (divRef) => window.scrollTo(0, divRef.current.offsetTop);
+  console.log(scrollToRef);
 
   useEffect(() => {
     setLoader(false);
@@ -82,7 +85,7 @@ function HomePage() {
                 marginTop="0px"
               />
             </div>
-            <div className="Page1 Vision_Section">
+            <div className="Page1 Vision_Section" ref={divRef}>
               <Section
                 BgHeading="Vision"
                 MainText="Providing solutions through technology, with the goal of promoting

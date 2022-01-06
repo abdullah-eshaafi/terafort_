@@ -68,7 +68,7 @@ function About() {
     <>
       <div className="HomePage-navbar-wrapper">
         <Navbar />
-      </div>{" "}
+      </div>
       <Container fluid className="About_Container_Wrapper px-0">
         <Row>
           <Col>
