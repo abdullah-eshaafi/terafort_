@@ -32,7 +32,7 @@ import axios from "axios";
 
 function Careers() {
   const careerList = [
-    "",
+    "Applying For",
     "IOS Developer",
     "Android Developer",
     "Backend Developer",
@@ -451,7 +451,10 @@ function Careers() {
         </div>
         <div className="page8">
           <Container>
-            <Row className="d-flex justify-content-center">
+            <Row
+              className="d-flex justify-content-center"
+              style={{ paddingTop: "180px" }}
+            >
               <Col md={12}>
                 <div className="d-flex justify-content-center contact_form_input">
                   <div className="col-md-6">
@@ -502,6 +505,7 @@ function Careers() {
                       {careerList.map((data) => {
                         return (
                           <>
+                            {" "}
                             <option value={data} key={data}>
                               {data}
                             </option>
@@ -509,53 +513,72 @@ function Careers() {
                         );
                       })}
                     </select>
+                    <p className={applyClass}>{error_apply}</p>
                   </div>
                 </div>
                 <div className="d-flex justify-content-center contact_form_input">
                   <div className="col-md-6">
-                    <textarea type="text" placeholder="Your Message" />
+                    <input
+                      type="file"
+                      accept=".doc, .docx, application/pdf"
+                      id="file-upload"
+                      onChange={(e) => handleAttachment(e.target.files)}
+                      onBlur={handlefileAttachment}
+                    />
+                    {/* <label htmlFor="file-upload">
+                  <span >Upload</span> your resume
+                  here
+                </label> */}
+                    <p className={fileClass}>{error_file}</p>
                   </div>
                 </div>
+
                 <div className="d-flex justify-content-center ">
                   <div className="col-md-6">
-                    <button type="submit" id="send_msg_btn">
+                    <button
+                      type="submit"
+                      id="send_msg_btn"
+                      onClick={handleSubmit}
+                    >
+                      {" "}
+                      <div className={spiner}></div>
                       Send <img src={Send_btn_Arroe} alt="..."></img>
                     </button>
+                    <p className={"m-0"}>{success_message}</p>
                   </div>
                 </div>
               </Col>
             </Row>
           </Container>
-          <div className="Footer Page2">
-            <Container>
-              <Row>
-                <Col>
-                  <div className="d-flex justify-content-between Footer_Heading_Wrapper">
-                    <div>
-                      <h5 className="size_24 line-36">Terafort</h5>
-                    </div>
-                    <div className="Horizontal_Line_Footer"></div>
-                    <div>
-                      <h5 className="size_24 line-36">contact@terafort.com</h5>
-                    </div>
+        </div>
+        <div className="Footer Page2 Carrer_foote_bg">
+          <Container>
+            <Row>
+              <Col>
+                <div className="d-flex justify-content-between Footer_Heading_Wrapper">
+                  <div>
+                    <h5 className="size_24 line-36">Terafort</h5>
                   </div>
-                  <div className="d-flex justify-content-between Footer_Address">
-                    <div className="col-md-3">
-                      <h5 className="size_24 line-36 letter_0_5 text_black_666">
-                        Terafort, Third Floor, The Plaza 100, MM Alam Road,
-                        Lahore
-                      </h5>
-                    </div>
-                    <div>
-                      <h5 className="size_24 line-36 letter_0_5 text_black_666">
-                        +92 301 1166 523
-                      </h5>
-                    </div>
+                  <div className="Horizontal_Line_Footer"></div>
+                  <div>
+                    <h5 className="size_24 line-36">contact@terafort.com</h5>
                   </div>
-                </Col>
-              </Row>
-            </Container>
-          </div>
+                </div>
+                <div className="d-flex justify-content-between Footer_Address">
+                  <div className="col-md-3">
+                    <h5 className="size_24 line-36 letter_0_5 text_black_666">
+                      Terafort, Third Floor, The Plaza 100, MM Alam Road, Lahore
+                    </h5>
+                  </div>
+                  <div>
+                    <h5 className="size_24 line-36 letter_0_5 text_black_666">
+                      +92 301 1166 523
+                    </h5>
+                  </div>
+                </div>
+              </Col>
+            </Row>
+          </Container>
         </div>
       </div>
     </>
