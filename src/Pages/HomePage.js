@@ -70,7 +70,7 @@ function HomePage() {
   useEffect(() => {
     axios
       .get(
-        "https://terafort.s3.ap-southeast-1.amazonaws.com/Homepage_video.mp4"
+        `https://cors-anywhere.herokuapp.com/https://www.api.com/https://terafort.s3.ap-southeast-1.amazonaws.com/Homepage_video.mp4`
       )
       .then((res) => {
         console.log(res.status);
@@ -350,7 +350,7 @@ function HomePage() {
         <div className="onboradingScreenWrapper">
           <div>
             <Zoom top cascade duration>
-              <img src={terafort_logo} alt="..."></img>
+              <img src={Tera_White} alt="..."></img>
             </Zoom>
           </div>
         </div>
