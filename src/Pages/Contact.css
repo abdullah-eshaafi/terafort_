@@ -51,7 +51,8 @@
 }
 
 .contact_form_input > div > input,
-.contact_form_input > div > textarea {
+.contact_form_input > div > textarea,
+.contact_form_input > div > select {
   width: 100%;
   margin-top: 32px;
   margin-bottom: 32px;
@@ -71,12 +72,14 @@
   color: #000000;
 }
 .contact_form_input > div > input:focus-visible,
-.contact_form_input > div > textarea:focus-visible {
+.contact_form_input > div > textarea:focus-visible,
+.contact_form_input > div > select:focus-visible {
   outline: none;
   border-bottom: 1px solid #dadada;
 }
 .contact_form_input > div > input::placeholder,
-.contact_form_input > div > textarea::placeholder {
+.contact_form_input > div > textarea::placeholder,
+.contact_form_input > div > select::placeholder {
   font-family: Poppins;
   font-style: normal;
   font-weight: normal;

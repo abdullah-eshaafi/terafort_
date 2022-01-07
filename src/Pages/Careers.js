@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import SectionHeading from "../Components/SectionHeading";
 import "./Career.css";
@@ -28,7 +28,190 @@ import Tera_White from "../Resources/Images/Homepage/Tera_White.svg";
 import side_menu from "../Resources/Images/Homepage/side_menu.svg";
 import Bar_white from "../Resources/Images/Homepage/Bar_white.svg";
 
+import axios from "axios";
+
 function Careers() {
+  const careerList = [
+    "",
+    "IOS Developer",
+    "Android Developer",
+    "Backend Developer",
+    "Frontend Developer",
+    "DevOps Engr",
+    "UI/UX Designer",
+    "SEO Expert",
+    "Data Analyst",
+    "Computer Graphic Artist",
+    "Unity Developer",
+    "3D Modeler",
+    "2D Animator",
+    "Game Designer/Planner",
+    "Software Quality Assurance",
+    "Accounts Executive",
+    "HR Executive",
+    "Computer Vision",
+  ];
+
+  const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; // Regex for Email.
+
+  const [spiner, setSpiner] = useState("");
+  const [success_message, setSuccess_Message] = useState("");
+
+  const [attachments, setAttachment] = useState("");
+  const [full_name, setFullName] = useState("");
+  const [apply_for, setApplyFor] = useState("");
+  const [email, setEmail] = useState("");
+
+  const [emailClass, setEmailClass] = useState("");
+  const [error_email, setError_email] = useState("");
+
+  const [error_name, setError_name] = useState("");
+  const [nameClass, setNameClass] = useState("");
+
+  const [error_apply, setError_apply] = useState("");
+  const [applyClass, setapplyClass] = useState("");
+
+  const [error_file, setError_file] = useState("");
+  const [fileClass, setfileClass] = useState("");
+
+  const handleNameChange = (e) => {
+    let element = e.target;
+    element.value = element.value.replace(/[^A-Za-z\s]/gi, "");
+    setFullName(e.target.value);
+    setNameClass("");
+    setError_name("");
+
+    // console.log(Name)
+  };
+  //===================================== handle name Validate function  ===============================
+  const handleNameValidate = (e) => {
+    if (full_name === "") {
+      setNameClass("");
+      setError_name("");
+    }
+  };
+
+  //===================================== handle email input field function  ===============================
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+    setEmailClass("");
+    setError_email("");
+    // console.log(email)
+  };
+  //===================================== handle email Validate function  ===============================
+  const handleEmailValidate = (e) => {
+    if (email === "") {
+      setError_email("");
+      setEmailClass("");
+    }
+    if (email !== "") {
+      if (email.match(regexEmail)) {
+        setError_email("");
+      } else {
+        setEmailClass("error-field3");
+        setError_email("Please enter a valid email");
+      }
+    }
+  };
+
+  //===================================== handle text input field function  ===============================
+  const handleApplyChange = (e) => {
+    setapplyClass("");
+    setError_apply("");
+    // console.log(text)
+  };
+
+  //===================================== handle setApplyFor input field function  ===============================
+  const handleApplyFor = (e) => {
+    setApplyFor(e.target.value);
+  };
+
+  //===================================== handle submit function  ===============================
+  const handleSubmit = (e) => {
+    if (
+      full_name === "" ||
+      apply_for === "" ||
+      email === "" ||
+      attachments === ""
+    ) {
+      setNameClass("error-field3");
+      setError_name("Please enter a valid name");
+      setEmailClass("error-field3");
+      setError_email("Please enter a valid email");
+      setapplyClass("error-field3");
+      setError_apply("Please select a field");
+      setfileClass("error-field3");
+      setError_file("Please upload your cv");
+      if (full_name !== "") {
+        setNameClass("");
+        setError_name("");
+      }
+      if (email !== "") {
+        if (email.match(regexEmail)) {
+          setEmailClass("");
+          setError_email("");
+        }
+      }
+      if (apply_for !== "") {
+        setapplyClass("");
+        setError_apply("");
+      }
+      if (attachments !== "") {
+        setfileClass("");
+        setError_file("");
+      }
+    } else {
+      setSpiner("spinner-border");
+      const fData = new FormData();
+      fData.append("attachments", attachments);
+      fData.append("full_name", full_name);
+      fData.append("email", email);
+      fData.append("apply_for", apply_for);
+      axios
+        .post("https://api.terafort.com/api/applyForCareer", fData)
+        .then((r) => {
+          console.log(r);
+          if (r.status === 200) {
+            setSpiner("");
+            setSuccess_Message("Sent successfully");
+            setTimeout((e) => {
+              setSuccess_Message("");
+              setSpiner("");
+              setFullName("");
+              setEmail("");
+              setApplyFor("");
+              setAttachment("");
+            }, 2000);
+            // console.log("dfgrf");
+          }
+        })
+        .catch((e) => {});
+    }
+
+    // console.log(apply_for)
+    // console.log(attachments)
+    // e.preventDefault();
+  };
+  //===================================== handle submit function  ===============================
+  const handleAttachment = (file) => {
+    setAttachment(file[0]);
+    if (attachments !== "") {
+      setError_file("");
+    }
+    // console.log(attachment)
+  };
+  //===================================== handle submit function  ===============================
+  const handlefileAttachment = (file) => {
+    if (attachments !== "") {
+      setfileClass("");
+      setError_file("");
+    }
+    if (attachments === "") {
+      setfileClass("");
+      setError_file("");
+    }
+  };
+
   return (
     <>
       {" "}
@@ -272,17 +455,60 @@ function Careers() {
               <Col md={12}>
                 <div className="d-flex justify-content-center contact_form_input">
                   <div className="col-md-6">
-                    <input type="text" placeholder="Full Name" />
+                    <input
+                      type="text"
+                      name="full_name"
+                      id="input-text"
+                      value={full_name}
+                      className={nameClass}
+                      required
+                      spellCheck="false"
+                      onChange={handleNameChange}
+                      onBlur={handleNameValidate}
+                      autoComplete={"off"}
+                      placeholder="Full Name"
+                    />
+                    <p className={nameClass}>{error_name}</p>
                   </div>
                 </div>
                 <div className="d-flex justify-content-center contact_form_input">
                   <div className="col-md-6">
-                    <input type="text" placeholder="Email" />
+                    <input
+                      type="text"
+                      name="email"
+                      id="input-text"
+                      required
+                      spellCheck="false"
+                      className={emailClass}
+                      value={email}
+                      onChange={handleEmailChange}
+                      onBlur={handleEmailValidate}
+                      autoComplete={"off"}
+                      placeholder="Email"
+                    />
+                    <p className={emailClass}>{error_email}</p>
                   </div>
                 </div>
                 <div className="d-flex justify-content-center contact_form_input">
                   <div className="col-md-6">
-                    <input type="text" placeholder="Phone Number" />
+                    <select
+                      required
+                      spellCheck="false"
+                      className={applyClass}
+                      onBlur={handleApplyChange}
+                      onChange={handleApplyFor}
+                      value={apply_for}
+                    >
+                      {careerList.map((data) => {
+                        return (
+                          <>
+                            <option value={data} key={data}>
+                              {data}
+                            </option>
+                          </>
+                        );
+                      })}
+                    </select>
                   </div>
                 </div>
                 <div className="d-flex justify-content-center contact_form_input">

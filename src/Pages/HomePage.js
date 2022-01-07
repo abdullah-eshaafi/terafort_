@@ -76,7 +76,10 @@ function HomePage() {
         console.log(res.status);
         setLoader(false);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+        setLoader(false);
+      });
   }, []);
 
   return (

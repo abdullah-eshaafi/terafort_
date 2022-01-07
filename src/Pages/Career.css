@@ -111,6 +111,33 @@
 .Apply_job > input {
   width: 100%;
 }
+
+.error-field1,
+.error-field2,
+.error-field3,
+.error-field4 {
+  border-color: #b00020 !important;
+}
+
+.error-field3 {
+  color: #b00020;
+}
+
+/* disabel button styling */
+
+button:disabled,
+button[disabled] {
+  border: 1px solid #999999;
+  background-color: #cccccc !important;
+  cursor: not-allowed;
+  color: #666666;
+}
+
+.spinner-border {
+  width: 20px !important;
+  height: 20px !important;
+  margin-right: 11px !important;
+}
 @media only screen and (max-width: 1800px) {
   .Careers_Departments {
     top: 32%;
