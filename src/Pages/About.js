@@ -187,12 +187,15 @@ function About() {
                 </Container>
               </div>
               <div className="Page3 About_Values_Section" ref={section1Ref}>
-                <Container>
-                  <Row>
-                    <Col>
-                      <Row>
-                        <Col lg={4}>
-                          <div className="d-md-flex About_Values_Main_Container">
+                <Container style={{ background: "black" }}>
+                  <Row style={{ background: "black" }}>
+                    <Col style={{ background: "black" }}>
+                      <Row style={{ background: "black" }}>
+                        <Col lg={4} style={{ background: "black" }}>
+                          <div
+                            className="d-md-flex About_Values_Main_Container"
+                            style={{ background: "black" }}
+                          >
                             <div className="col-lg-6">
                               <h5 className="size_32 line-56 text_white">
                                 Our Values

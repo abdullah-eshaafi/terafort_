@@ -92,7 +92,7 @@
 }
 
 .About_Values_Section {
-  background-color: #000000;
+  background-color: #000000 !important;
 }
 .About_Values_Main_Container {
   margin-top: 162px;
