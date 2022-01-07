@@ -53,6 +53,7 @@
   position: absolute;
   bottom: 25.5%;
   left: 45.6%;
+  cursor: pointer;
 }
 
 #HomePage_Left_Arrow {

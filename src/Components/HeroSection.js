@@ -18,7 +18,11 @@ function Section({
   Vision_Line_HomePage,
   HomePage_Left_Arrow,
   Mission_right_arrow,
+  handlenext,
+  handlePrev,
+  currentIndex,
 }) {
+  console.log(MainText && MainText);
   return (
     <div className="Who_section_container">
       <div
@@ -27,7 +31,9 @@ function Section({
           display: Vision_Line_HomePage ? Vision_Line_HomePage : "none",
         }}
       >
-        <h6 className="size_16 line-24 letter_0_5 text_black_dark">1</h6>
+        <h6 className="size_16 line-24 letter_0_5 text_black_dark">
+          {currentIndex}
+        </h6>
         <img src={Vision_Line_HomePage} alt="..." />
         <h6 className="size_16 line-24 letter_0_5 text_black_dark">4</h6>
       </div>
@@ -71,7 +77,7 @@ function Section({
                     <img src={HomePage_Right_Arrow} alt="..." />
                   </div>
                 </div>
-              </div>{" "}
+              </div>
             </Fade>
           </div>
         </div>
@@ -80,8 +86,13 @@ function Section({
         className="Mission_bootom_arrows"
         style={{ display: HomePage_Left_Arrow ? HomePage_Left_Arrow : "none" }}
       >
-        <img src={HomePage_Left_Arrow} alt="..." id="HomePage_Left_Arrow" />
-        <img src={Mission_right_arrow} alt="..." />
+        <img
+          src={HomePage_Left_Arrow}
+          alt="..."
+          id="HomePage_Left_Arrow"
+          onClick={handlePrev}
+        />
+        <img src={Mission_right_arrow} alt="..." onClick={handlenext} />
       </div>
     </div>
   );

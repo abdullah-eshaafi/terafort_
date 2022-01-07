@@ -236,12 +236,11 @@ function About() {
                             <div className="col-lg-4 Last_Index_Slider">
                               {items.map((item, index) => (
                                 <div
-                                  className="text_Wrapper_slider"
                                   key={index}
                                   className={
                                     index === LastIndex
-                                      ? "slide active"
-                                      : "slide"
+                                      ? "slide active text_Wrapper_slider"
+                                      : "slide text_Wrapper_slider"
                                   }
                                 >
                                   {index === LastIndex && (
@@ -265,12 +264,11 @@ function About() {
                             <div className="col-lg-4">
                               {items.map((item, index) => (
                                 <div
-                                  className="text_white col-lg-12 d-flex justify-content-center"
                                   key={index}
                                   className={
                                     index === currentIndex
-                                      ? "slide active"
-                                      : "slide"
+                                      ? "slide active text_white col-lg-12 d-flex justify-content-center"
+                                      : "slide text_white col-lg-12 d-flex justify-content-center"
                                   }
                                 >
                                   {index === currentIndex && (
@@ -293,12 +291,11 @@ function About() {
                             <div className="col-lg-4 Last_Index_Slider">
                               {items.map((item, index) => (
                                 <div
-                                  className="Slider_First_ItemSecond col-lg-12 d-flex justify-content-end"
                                   key={index}
                                   className={
                                     index === secondIndex
-                                      ? "slide active"
-                                      : "slide"
+                                      ? "slide active Slider_First_ItemSecond col-lg-12 d-flex justify-content-end"
+                                      : "slide Slider_First_ItemSecond col-lg-12 d-flex justify-content-end"
                                   }
                                 >
                                   {index === secondIndex && (

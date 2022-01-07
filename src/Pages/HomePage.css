@@ -11,7 +11,7 @@
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  /* background-color: black; */
+  background-color: black;
   background-size: cover;
 }
 .HomePage_wrapper {
@@ -45,6 +45,11 @@
 }
 .who_we_are_section {
   background: #ffffff;
+}
+
+.slide.Proactive {
+  opacity: 1;
+  transition-duration: 2s;
 }
 
 @keyframes homePagePic {

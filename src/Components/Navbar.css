@@ -37,6 +37,13 @@
   position: relative;
   z-index: 99999;
 }
+.Navabar_List_Wrapper:hover a {
+  color: rgba(255, 255, 255, 0.57);
+}
+
+.Navabar_List_Wrapper > li > a:hover {
+  color: #ffffff;
+}
 .Navabar_List_Wrapper > li > a {
   text-decoration: none;
   color: #ffffff;
