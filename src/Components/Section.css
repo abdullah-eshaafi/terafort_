@@ -49,6 +49,10 @@
   margin-top: -8px;
 }
 
+.about_text_section > a {
+  text-decoration: none;
+}
+
 .Mission_bootom_arrows {
   position: absolute;
   bottom: 25.5%;

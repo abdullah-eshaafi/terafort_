@@ -7,6 +7,7 @@ import "./Section.css";
 //images of Page
 
 import Fade from "react-reveal/Fade";
+import { Link } from "react-router-dom";
 
 function Section({
   BgHeading,
@@ -25,18 +26,22 @@ function Section({
   console.log(MainText && MainText);
   return (
     <div className="Who_section_container">
-      <div
-        className="Vision_digits"
-        style={{
-          display: Vision_Line_HomePage ? Vision_Line_HomePage : "none",
-        }}
-      >
-        <h6 className="size_16 line-24 letter_0_5 text_black_dark">
-          {currentIndex}
-        </h6>
-        <img src={Vision_Line_HomePage} alt="..." />
-        <h6 className="size_16 line-24 letter_0_5 text_black_dark">4</h6>
-      </div>
+      <Fade top duration={1200} distance={"100px"} delay={700}>
+        {" "}
+        <div
+          className="Vision_digits"
+          style={{
+            display: Vision_Line_HomePage ? Vision_Line_HomePage : "none",
+          }}
+        >
+          <h6 className="size_16 line-24 letter_0_5 text_black_dark">
+            {currentIndex}
+          </h6>
+          <img src={Vision_Line_HomePage} alt="..." />
+          <h6 className="size_16 line-24 letter_0_5 text_black_dark">4</h6>
+        </div>
+      </Fade>
+
       <div className="Who_section_wrapper">
         <div className="Who_section_bg_text line-272">
           <Fade top duration={1200} delay={700}>
@@ -60,23 +65,25 @@ function Section({
             </Fade>
             <Fade left duration={1500} delay={2000} distance={"20%"}>
               <div className="about_text_section">
-                <div className="d-flex">
-                  <div>
-                    <h6 className="size_16 line-24 letter_0_5 text_black_dark">
-                      {LinkText}
-                    </h6>
-                  </div>
-                  <div
-                    className="about_img_section"
-                    style={{
-                      display: HomePage_Right_Arrow
-                        ? HomePage_Right_Arrow
-                        : "none",
-                    }}
-                  >
-                    <img src={HomePage_Right_Arrow} alt="..." />
-                  </div>
-                </div>
+                <Link to="/about">
+                  <div className="d-flex" style={{ marginTop: "40px" }}>
+                    <div>
+                      <h6 className="size_16 line-24 letter_0_5 text_black_dark">
+                        {LinkText}
+                      </h6>
+                    </div>
+                    <div
+                      className="about_img_section"
+                      style={{
+                        display: HomePage_Right_Arrow
+                          ? HomePage_Right_Arrow
+                          : "none",
+                      }}
+                    >
+                      <img src={HomePage_Right_Arrow} alt="..." />
+                    </div>
+                  </div>{" "}
+                </Link>
               </div>
             </Fade>
           </div>
@@ -86,13 +93,17 @@ function Section({
         className="Mission_bootom_arrows"
         style={{ display: HomePage_Left_Arrow ? HomePage_Left_Arrow : "none" }}
       >
-        <img
-          src={HomePage_Left_Arrow}
-          alt="..."
-          id="HomePage_Left_Arrow"
-          onClick={handlePrev}
-        />
-        <img src={Mission_right_arrow} alt="..." onClick={handlenext} />
+        <Fade left duration={1200} delay={1500}>
+          <img
+            src={HomePage_Left_Arrow}
+            alt="..."
+            id="HomePage_Left_Arrow"
+            onClick={handlePrev}
+          />
+        </Fade>
+        <Fade right duration={1200} delay={1500}>
+          <img src={Mission_right_arrow} alt="..." onClick={handlenext} />
+        </Fade>
       </div>
     </div>
   );

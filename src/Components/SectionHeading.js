@@ -5,7 +5,9 @@ import Twitter_Icon from "../Resources/Images/About/Twitter_Icon.svg";
 import Down_Arrow from "../Resources/Images/About/Down_Arrow.svg";
 import Vision_Line_HomePage from "../Resources/Images/Homepage/Vision_Line_HomePage.svg";
 import Zoom from "react-reveal/Zoom";
-import Typed from "react-typed";
+
+import { Link } from "react-router-dom";
+
 function SectionHeading({ title, find, Us, here }) {
   return (
     <div>
@@ -31,22 +33,42 @@ function SectionHeading({ title, find, Us, here }) {
         <div className="about_section">
           <div className="about_section_images_wrapper">
             <div className="about_section_images">
-              <img src={Twitter_Icon} alt="..." />
+              <a
+                href="https://twitter.com/TeraFort_inc"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={Twitter_Icon} alt="..." />
+              </a>
             </div>
             <div className="about_section_images">
-              <img src={LinkdIn_Icon} alt="..." />
+              <a
+                href=" https://pk.linkedin.com/company/terafort"
+                target="_blank"
+              >
+                {" "}
+                <img src={LinkdIn_Icon} alt="..." />
+              </a>
             </div>
             <div className="about_section_images">
-              <img src={Fb_Icon} alt="..." />
+              <a href="https://www.facebook.com/Terafort.Inc" target="blank">
+                {" "}
+                <img src={Fb_Icon} alt="..." />
+              </a>
             </div>
           </div>
           <div>
             <img src={Down_Arrow} alt="..." />
-          </div>
-          <div className="about_us_contact_section">
-            <h6 className="size_16 line-24 letter_0_5">Contact Us</h6>
-            <img src={Vision_Line_HomePage} alt="..." />
-          </div>
+          </div>{" "}
+          <Link
+            to="/contact"
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            <div className="about_us_contact_section">
+              <h6 className="size_16 line-24 letter_0_5">Contact Us</h6>
+              <img src={Vision_Line_HomePage} alt="..." />
+            </div>
+          </Link>
         </div>
       </div>
     </div>

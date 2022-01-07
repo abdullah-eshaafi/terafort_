@@ -17,6 +17,7 @@ function PortfolioTextSection({
   ImageSpacing,
   TagLineSpacing,
   mt,
+  route,
 }) {
   return (
     <Container>
@@ -49,13 +50,21 @@ function PortfolioTextSection({
               <Fade bottom>{PortfolioDesc}</Fade>
             </p>
           </div>
-
-          <div>
-            <div className="col-lg-9 d-flex potfolio_visiting_link">
-              <h6 className="size_16 line-24 letter_0_5">Visit Site</h6>
-              <img src={HomePage_Right_Arrow} alt="..." />
+          <Fade bottom>
+            <div>
+              <a
+                href={route}
+                target="_blank"
+                rel="noreferrer"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                <div className="col-lg-9 d-flex potfolio_visiting_link">
+                  <h6 className="size_16 line-24 letter_0_5">Visit Site</h6>
+                  <img src={HomePage_Right_Arrow} alt="..." />
+                </div>{" "}
+              </a>{" "}
             </div>
-          </div>
+          </Fade>
         </Col>
       </Row>
     </Container>

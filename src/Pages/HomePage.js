@@ -33,6 +33,8 @@ import Bar_white from "../Resources/Images/Homepage/Bar_white.svg";
 import { useInView } from "react-intersection-observer";
 import Zoom from "react-reveal/Zoom";
 import axios from "axios";
+
+import { Link } from "react-router-dom";
 function HomePage() {
   const MissionText = [
     {
@@ -226,6 +228,7 @@ function HomePage() {
                       col="10"
                       ImageSpacing="Potfolio_Img_Section"
                       TagLineSpacing="Potfolio_PortFolioLine_Section"
+                      route="https://eshaafi.com/"
                     />
                   </Col>
                 </Row>
@@ -255,6 +258,7 @@ function HomePage() {
                       col="10"
                       ImageSpacing="Potfolio_Img_Section"
                       TagLineSpacing="Potfolio_PortFolioLine_Section"
+                      route="https://cuptie.co"
                     />
                   </Col>
                 </Row>
@@ -286,7 +290,8 @@ function HomePage() {
                       col="10"
                       ImageSpacing="Potfolio_Img_Section_aurelian"
                       TagLineSpacing="Potfolio_PortFolioLine_Section_Aurelian"
-                      mt="22px"
+                      mt="30px"
+                      route="https://aurelianorigins.com"
                     />
                   </Col>
                 </Row>
@@ -303,12 +308,18 @@ function HomePage() {
                       Join Us
                     </h2>
                   </div>
-                  <div className="d-flex justify-content-center careers_section_img">
-                    <h5 className="size_16 line-24 letter_0_5 text-white">
-                      Careers
-                    </h5>
-                    <img src={careers_arrow} alt="..." />
-                  </div>
+                  <Link
+                    to="career"
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
+                    {" "}
+                    <div className="d-flex justify-content-center careers_section_img">
+                      <h5 className="size_16 line-24 letter_0_5 text-white">
+                        Careers
+                      </h5>
+                      <img src={careers_arrow} alt="..." />
+                    </div>
+                  </Link>
                 </div>
               </div>
               <div className="Footer Page2">

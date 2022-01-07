@@ -1,8 +1,6 @@
 import React from "react";
 import "./PortfolioSection.css";
 
-
-
 import White_Vertical_Line from "../Resources/Images/Homepage/White_Vertical_Line.png";
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -24,13 +22,16 @@ function PortfolioSection({
           <div className="Portfolio_Section_Wrapper">
             <div className="Eshaafi_Portfolio_Img_Section ">
               <div className="d-flex">
-                <div className="text_white Eshaafi_Portfolio_Slides">
-                  <h6 className="size_16 line-24 letter_0_5">{SlideEnd}</h6>
-                  <div>
-                    <img src={White_Vertical_Line} alt="..." />
+                <Fade top duration={1200} distance={"100px"} delay={700}>
+                  <div className="text_white Eshaafi_Portfolio_Slides">
+                    <h6 className="size_16 line-24 letter_0_5">{SlideEnd}</h6>
+                    <div>
+                      <img src={White_Vertical_Line} alt="..." />
+                    </div>
+                    <h6 className="size_16 line-24 letter_0_5">{SlideStart}</h6>
                   </div>
-                  <h6 className="size_16 line-24 letter_0_5">{SlideStart}</h6>
-                </div>
+                </Fade>
+
                 <Zoom reset={true}>
                   <img src={PortfolioImage} alt="..." className="img-fluid" />
                 </Zoom>

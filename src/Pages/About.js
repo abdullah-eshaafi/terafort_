@@ -90,7 +90,7 @@ function About() {
               <SectionHeading title="About Us" />
               <div className="Page3">
                 <Container>
-                  <Row>
+                  <Row className="all-top-spacing">
                     <Col
                       lg={6}
                       className="d-flex justify-content-lg-end justify-content-center"
