@@ -29,7 +29,7 @@ import side_menu from "../Resources/Images/Homepage/side_menu.svg";
 import Bar_white from "../Resources/Images/Homepage/Bar_white.svg";
 
 import axios from "axios";
-
+import Fade from "react-reveal/Fade";
 function Careers() {
   const careerList = [
     "Applying For",
@@ -349,32 +349,46 @@ function Careers() {
                 <div className="d-flex justify-content-center align-items-center About_Departments_Wrapper">
                   <div className="col-lg-4">
                     <div>
-                      <img src={game_development} alt="..." />
+                      <Fade left distance={"100px"}>
+                        <img src={game_development} alt="..." />
+                      </Fade>
                     </div>
                     <div className="mt_40">
-                      <h5 className="size_24 line-24 text_black_dark">
-                        Game Development
-                      </h5>
+                      <Fade left distance={"100px"}>
+                        <h5 className="size_24 line-24 text_black_dark">
+                          Game Development
+                        </h5>
+                      </Fade>
                     </div>
                   </div>
                   <div className="col-lg-4">
                     <div>
-                      <img src={app_development} alt="..." />
+                      <Fade left distance={"100px"}>
+                        {" "}
+                        <img src={app_development} alt="..." />
+                      </Fade>
                     </div>
                     <div className="mt_40">
-                      <h5 className="size_24 line-24 text_black_dark">
-                        App Development
-                      </h5>
+                      <Fade left distance={"100px"}>
+                        {" "}
+                        <h5 className="size_24 line-24 text_black_dark">
+                          App Development
+                        </h5>
+                      </Fade>
                     </div>
                   </div>
                   <div className="col-lg-4">
                     <div>
-                      <img src={game_planning} alt="..." />
+                      <Fade left distance={"100px"}>
+                        <img src={game_planning} alt="..." />
+                      </Fade>
                     </div>
                     <div className="mt_40">
-                      <h5 className="size_24 line-24 text_black_dark">
-                        Game Planning
-                      </h5>
+                      <Fade left distance={"100px"}>
+                        <h5 className="size_24 line-24 text_black_dark">
+                          Game Planning
+                        </h5>
+                      </Fade>
                     </div>
                   </div>
                 </div>
@@ -382,33 +396,45 @@ function Careers() {
                 <div className="d-flex About_Departments_Wrapper justify-content-center">
                   <div className="col-lg-4">
                     <div>
-                      <img src={d_modeling} alt="..." />
+                      <Fade left distance={"100px"}>
+                        <img src={d_modeling} alt="..." />
+                      </Fade>{" "}
                     </div>
                     <div className="mt_40">
-                      <h5 className="size_24 line-24 text_black_dark">
-                        3D Modeling
-                      </h5>
+                      <Fade left distance={"100px"}>
+                        <h5 className="size_24 line-24 text_black_dark">
+                          3D Modeling
+                        </h5>
+                      </Fade>
                     </div>
                   </div>
                   <div className="col-lg-4">
                     <div>
-                      <img src={web_development} alt="..." />
+                      <Fade left distance={"100px"}>
+                        <img src={web_development} alt="..." />
+                      </Fade>{" "}
                     </div>
                     <div className="mt_40">
-                      <h5 className="size_24 line-24 text_black_dark">
-                        Web Development
-                      </h5>
+                      <Fade left distance={"100px"}>
+                        <h5 className="size_24 line-24 text_black_dark">
+                          Web Development
+                        </h5>
+                      </Fade>{" "}
                     </div>
                   </div>
 
                   <div className="col-lg-4">
                     <div>
-                      <img src={mobile_app} alt="..." />
+                      <Fade left distance={"100px"}>
+                        <img src={mobile_app} alt="..." />
+                      </Fade>{" "}
                     </div>
                     <div className="mt_40">
-                      <h5 className="size_24 line-24 text_black_dark">
-                        UI/UX Designing
-                      </h5>
+                      <Fade left distance={"100px"}>
+                        <h5 className="size_24 line-24 text_black_dark">
+                          UI/UX Designing
+                        </h5>
+                      </Fade>
                     </div>
                   </div>
                 </div>
