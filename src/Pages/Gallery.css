@@ -20,11 +20,16 @@
   background: #003f63;
 }
 
+.galeery_First_Wrapper_ {
+  background: #f9ecb7;
+}
+
 .wrapper {
   padding: 70px 0;
 }
 /* Default slide */
-
+.slider_wrapper_gallery_ {
+}
 .owl-carousel .owl-stage {
   display: flex;
   justify-content: center;
@@ -52,7 +57,10 @@
 #arrow_img {
   margin-right: 20px;
 }
-
+.Sluider_conting_wrappers {
+  display: flex;
+  justify-content: start;
+}
 @media only screen and (max-width: 1439px) {
   .sm-first-wrapper {
     width: 284px;
@@ -126,5 +134,9 @@
   .lg-first-wrapper {
     width: 200px;
     height: 236px;
+  }
+  .Sluider_conting_wrappers {
+    display: flex;
+    justify-content: center;
   }
 }

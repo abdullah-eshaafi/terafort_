@@ -19,6 +19,7 @@ import Cuptie_portfolio_img from "../Resources/Images/Homepage/Cuptie_portfolio_
 
 import Aurilian_portfolio_site from "../Resources/Images/Homepage/Aurilian_portfolio_site.png";
 
+import Fade from "react-reveal/Fade";
 import careers_arrow from "../Resources/Images/Homepage/careers_arrow.svg";
 import Section from "../Components/HeroSection";
 import PortfolioSection from "../Components/PortfolioSection";
@@ -301,12 +302,15 @@ function HomePage() {
               <div className="Join_Section_Wrapper">
                 <div
                   className="Join_Section_last_Wrapper"
-                  style={{ paddingTop: "14%" }}
+                  // style={{ paddingTop: "14%" }}
                 >
                   <div>
-                    <h2 className="size_225 line-272 letter-1_5 text_white">
-                      Join Us
-                    </h2>
+                    <Fade top distance={"100px"}>
+                      {" "}
+                      <h2 className="size_225 line-272 letter-1_5 text_white">
+                        Join Us
+                      </h2>
+                    </Fade>
                   </div>
                   <Link
                     to="career"

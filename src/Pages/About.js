@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./About.css";
 import { Container, Row, Col } from "react-bootstrap";
 
 //Images of Icons
 
-import CEO_About from "../Resources/Images/About/CEO_About.png";
+import CEO_About from "../Resources/Images/About/CEO_About.jpg";
 
-import about_values_horizontal_line from "../Resources/Images/About/about_values_horizontal_line.svg";
+import about_values_horizontal_line from "../Resources/Images/About/about_line.svg";
 
 import Slider_Short_Line from "../Resources/Images/About/Slider_Short_Line.svg";
 
@@ -19,7 +19,6 @@ import Navbar from "../Components/Navbar";
 import SectionHeading from "../Components/SectionHeading";
 
 import Fade from "react-reveal/Fade";
-import Slide from "react-reveal/Slide";
 
 import terafort_logo from "../Resources/Images/Homepage/terafort_logo.svg";
 import Tera_White from "../Resources/Images/Homepage/Tera_White.svg";
@@ -29,6 +28,7 @@ import Bar_white from "../Resources/Images/Homepage/Bar_white.svg";
 
 import { useInView } from "react-intersection-observer";
 
+import { Link } from "react-router-dom";
 function About() {
   const [section1Ref, section1InView] = useInView({ threshold: 0.5 });
 
@@ -37,28 +37,28 @@ function About() {
   const [items, setItems] = useState([
     {
       id: 1,
-      title: "We Never Give Up",
-      text: "We will either find a way or make our own but we will never give up easily",
+      title: "HOPE FOR ALL",
+      text: "The Terafort family serves as a hope for anyone from anywhere in the world.",
     },
     {
       id: 2,
-      title: "DAUNTLESS LOYALTY",
-      text: "We remain loyal to our promises for a blissful present, as well as a positive and fortified future",
+      title: "OUR 100X GROWTH PLAN",
+      text: "We intentionally work towards attaining unexplainable growth so an extremely large number of people will be impacted.",
     },
     {
       id: 3,
-      title: "Hope For All",
-      text: "We will either find a way or make our own but we will never give up easily",
+      title: "We Never Give Up",
+      text: "We will either find a way or make our own but we will never give up easily.",
     },
     {
       id: 4,
       title: "DAUNTLESS LOYALTY",
-      text: "We will either find a way or make our own but we will never give up easily",
+      text: "We remain loyal to our promises for a blissful present, as well as a positive and fortified future.",
     },
     {
       id: 5,
-      title: "Hope For All",
-      text: "The Terafort family serves as a hope for anyone from anywhere in the world.",
+      title: "Determination",
+      text: "We are determined to arouse happiness, progress and prosperity while reaching new heights.",
     },
   ]);
 
@@ -203,19 +203,21 @@ function About() {
                             </div>
 
                             <div className="col-lg-6 d-flex justify-content-center">
-                              <img
-                                src={about_values_horizontal_line}
-                                alt=".."
-                              />
+                              <div style={{ marginTop: "20px" }}>
+                                <img
+                                  src={about_values_horizontal_line}
+                                  alt=".."
+                                />
+                              </div>
                             </div>
                           </div>
                         </Col>
                         <Col lg={8}>
                           <div className="col-lg-9 About_Values_text_Container">
                             <p className="size_16 line-28 letter_0_5 text_white">
-                              a two to three line text with a brief summary of
-                              all of our values combined, most importantly it
-                              must be a single sentence
+                              by staying true to our values, we ensure the
+                              progress and prosperity of every single individual
+                              associated with Terafort
                             </p>
                           </div>
                         </Col>
@@ -224,7 +226,7 @@ function About() {
                         <Col className="d-flex">
                           <div className="Slider_Counting_Numbers col-lg-5 d-flex justify-content-end">
                             <h6 className="text_white size_16 line-24 letter_0_5">
-                              1
+                              {currentIndex + 1}
                             </h6>
                             <img src={Slider_Short_Line} alt="..." />
                             <h6 className="text_white size_16 line-24 letter_0_5">
@@ -252,7 +254,7 @@ function About() {
                                         <h5 className="size_32 line-56 slider_text_animate">
                                           {item.title}
                                         </h5>
-                                      </div>{" "}
+                                      </div>
                                       <div className="col-lg-10">
                                         <p className="size_16 line-28">
                                           {item.text}
@@ -324,8 +326,8 @@ function About() {
                         </Col>
                       </Row>
                       <Row>
-                        <Col className="d-flex Sluider_conting_wrappers">
-                          <div className="Slider_Counting_Numbers col-lg-7 d-flex justify-content-lg-end justify-content-center">
+                        <Col className="d-flex Sluider_conting_wrappers col-lg-10">
+                          <div className="Slider_Counting_Numbers col-lg-8 d-flex justify-content-lg-end justify-content-center">
                             <button className="no_btn" onClick={handlePrev}>
                               <img src={HomePage_Left_Arrow} alt="..." />
                             </button>
@@ -362,17 +364,13 @@ function About() {
                           </div>
                         </div>
                         <div className="Join_Section_About_text">
-                          <div className="col-md-12">
-                            <p className="size_32 line-56">
-                              Creators, makers, innovators...
-                            </p>
-                          </div>
                           <div className="col-md-8">
                             <p className="size_32 line-56">
-                              Come join our team and make your mark on
-                              Terafort’s brave, curious and strategic work.
-                              You’re only one you and baby that’s the fun of
-                              you.
+                              Terafort is proud to be an Equal Opportunity
+                              Employer. We value the perspectives, a diverse
+                              workforce brings, to implement creative
+                              development solutions. Join our Terafort family &
+                              get ready to make a difference.
                             </p>
                           </div>
                         </div>
@@ -380,10 +378,15 @@ function About() {
                     </Row>
                     <Row>
                       <Col>
-                        <div className="about_career_section d-flex">
-                          <h6 className="size_16 line-24">Careers</h6>
-                          <img src={About_Right_Arrow} alt="..." />
-                        </div>
+                        <Link
+                          to="/career"
+                          style={{ color: "black", textDecoration: "none" }}
+                        >
+                          <div className="about_career_section d-flex">
+                            <h6 className="size_16 line-24">Careers</h6>
+                            <img src={About_Right_Arrow} alt="..." />
+                          </div>
+                        </Link>
                       </Col>
                     </Row>
                   </Container>

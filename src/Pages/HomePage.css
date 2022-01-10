@@ -177,7 +177,9 @@
   border-bottom: 1px solid #000000;
   padding-top: -10px;
 }
-
+.Join_Section_last_Wrapper {
+  padding-top: 14%;
+}
 @media only screen and (max-width: 1439px) {
 }
 @media only screen and (max-width: 1200px) {
@@ -187,6 +189,9 @@
 @media only screen and (max-width: 768px) {
 }
 @media only screen and (max-width: 576px) {
+  .Join_Section_last_Wrapper {
+    padding-top: 56%;
+  }
 }
 .loader:empty {
   position: absolute;

@@ -112,6 +112,10 @@
   width: 100%;
 }
 
+.Apply_job > input:focus {
+  border-bottom: 1px solid black;
+}
+
 .error-field1,
 .error-field2,
 .error-field3,

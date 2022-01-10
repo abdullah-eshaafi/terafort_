@@ -9,6 +9,8 @@ import "./Navbar.css";
 import Fade from "react-reveal/Fade";
 import { Link } from "react-router-dom";
 
+import Tera_White from "../Resources/Images/Homepage/Tera_White.svg";
+
 function Navbar({ src, img }) {
   const [showNavbar, setSHowNavbar] = useState(false);
 

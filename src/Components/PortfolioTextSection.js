@@ -5,7 +5,6 @@ import Eshaafi_horizontal_Line from "../Resources/Images/Homepage/Eshaafi_horizo
 import HomePage_Right_Arrow from "../Resources/Images/Homepage/HomePage_Right_Arrow.svg";
 import "./PortfolioTextSection.css";
 
-import LightSpeed from "react-reveal/LightSpeed";
 import Fade from "react-reveal/Fade";
 function PortfolioTextSection({
   PortfolioName,
@@ -24,13 +23,13 @@ function PortfolioTextSection({
       <Row className="Potfolio_Text_Wrapper">
         <Col lg={12}>
           <div className={`col-lg-${col} d-lg-flex`}>
-            <LightSpeed left>
+            <Fade left cascade distance={"100px"}>
               <div className="d-lg-flex align-items-end">
                 <h1 className={`size_120 ${line} letter-1_5`}>
                   {PortfolioName}
                 </h1>
               </div>
-            </LightSpeed>
+            </Fade>
 
             <div
               className={`d-lg-flex align-items-${align} ${ImageSpacing} responvie_Portfolio_Line`}
@@ -40,14 +39,16 @@ function PortfolioTextSection({
             </div>
             <div className={`d-lg-flex align-items-center ${TagLineSpacing}`}>
               <h5 className="size_24  line-40  letter_0_5 text_black_dark">
-                <LightSpeed Right>{PortfolioLine}</LightSpeed>
+                <Fade Right>{PortfolioLine}</Fade>
               </h5>
             </div>
           </div>
 
           <div className="col-lg-9 PorfolioDesc_Section">
             <p className="size_24 line-40 text_black_dark letter_0_5">
-              <Fade bottom>{PortfolioDesc}</Fade>
+              <Fade left cascade>
+                {PortfolioDesc}
+              </Fade>
             </p>
           </div>
           <Fade bottom>
@@ -61,8 +62,8 @@ function PortfolioTextSection({
                 <div className="col-lg-9 d-flex potfolio_visiting_link">
                   <h6 className="size_16 line-24 letter_0_5">Visit Site</h6>
                   <img src={HomePage_Right_Arrow} alt="..." />
-                </div>{" "}
-              </a>{" "}
+                </div>
+              </a>
             </div>
           </Fade>
         </Col>

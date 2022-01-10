@@ -45,55 +45,75 @@ import Bar_white from "../Resources/Images/Homepage/Bar_white.svg";
 
 import { useInView } from "react-intersection-observer";
 
+import Line_ from "../Resources/Images/Gallery/Line.svg";
+
+import one_ from "../Resources/Images/Gallery/1.svg";
+import two_ from "../Resources/Images/Gallery/2.svg";
+
 function Gallery() {
   const item = [
     {
       src: one,
+      text: "Mr. Shafique Anwar, CEO of Terafort, delivering a speech at company dinner",
     },
     {
       src: two,
+      text: "Mussayib Quddusi, UX Designer, sharing his professional experience at Terafort",
     },
     {
       src: three,
+      text: "Adnan Hasan from the Marketing department rocking the stage",
     },
     {
       src: four,
+      text: "Members of several different teams come together for a group photo",
     },
     {
       src: five,
+      text: "Members from the team eShaafi come togther for a photo",
     },
     {
       src: six,
+      text: "Our team members having a good time",
     },
     {
       src: seven,
+      text: "A memorable dinner at the Pearl Continental Hotel, Lahore",
     },
     {
       src: eight,
+      text: "Our repectable team members, enjoying their evening",
     },
     {
       src: nine,
+      text: "Team eShaafi poses for a group photo",
     },
     {
       src: ten,
+      text: "Our honorary guests enjoying their evening with Terafort",
     },
   ];
 
   const items = [
     {
       src: ele,
+      text: "Very first employees honoured with cake cutting ceremony at Terafort office",
     },
     {
       src: twe,
+      text: "CEO, Mr Shafique Anwar welcoming the newest members of the Terafort family",
     },
     {
       src: thirt,
+      text: "The professional working environment at Terafort",
     },
     {
       src: fout,
+      text: "Mussayib, the UX Desiger from team eShaafi, at his workstation",
     },
     {
       src: fift,
+      text: "eShaafi- a brand that stands for the best healthcare opportunities for everyone",
     },
   ];
   const [currentIndex, setcurrentIndex] = useState(0);
@@ -166,11 +186,14 @@ function Gallery() {
         <div className="Page12">
           <SectionHeading title="Gallery" />
         </div>
-        <div className="Page12 galeery_First_Wrapper" ref={section1Ref}>
+        <div
+          className="Page12 galeery_First_Wrapper all-top-spacing"
+          ref={section1Ref}
+        >
           <Container>
             <Row>
               <Col lg={8}>
-                <div className="d-flex justify-content-between Career_Roles_Wrapper">
+                <div className="d-md-flex justify-content-between Career_Roles_Wrapper">
                   <h5 className="size_32 line-56 text_white">Company Dinner</h5>
 
                   <img src={Careers_horizontal_Line} alt="..." />
@@ -185,7 +208,7 @@ function Gallery() {
               </Col>
             </Row>
           </Container>
-          <div className="slider_wrapper_gallery">
+          <div className="slider_wrapper_gallery ">
             <div className="col-lg-12 d-flex align-items-center justify-content-around">
               <div className="col-lg-4 sm-first-wrapper">
                 {item.map((ite, index) => (
@@ -210,6 +233,12 @@ function Gallery() {
                     {index === currentIndex && (
                       <div className="sm-img">
                         <img src={ite.src} alt="..."></img>
+                        <p
+                          className="size_16 line-28 text_white"
+                          style={{ paddingTop: "8px" }}
+                        >
+                          {ite.text}
+                        </p>
                       </div>
                     )}
                   </div>
@@ -243,26 +272,31 @@ function Gallery() {
             </Row>
           </div>
         </div>
-        <div className="Page12 galeery_First_Wrapper" ref={section2Ref}>
+        <div
+          className="Page12 galeery_First_Wrapper_ all-top-spacing"
+          ref={section2Ref}
+        >
           <Container>
             <Row>
               <Col lg={8}>
-                <div className="d-flex justify-content-between Career_Roles_Wrapper">
-                  <h5 className="size_32 line-56 text_white">Company Dinner</h5>
+                <div className="d-md-flex justify-content-between Career_Roles_Wrapper">
+                  <h5 className="size_32 line-56 text_black_dark">
+                    Inauguration
+                  </h5>
 
-                  <img src={Careers_horizontal_Line} alt="..." />
+                  <img src={Line_} alt="..." />
 
                   <h5
-                    className="size_16 line-28 text_white"
+                    className="size_16 line-28 text_black_dark"
                     id="Career_Family_section"
                   >
-                    June 25, 2021 at Pearl Continental, Lahore
+                    March 08, 2021 at Terafort Office, Lahore
                   </h5>
                 </div>
               </Col>
             </Row>
           </Container>
-          <div className="slider_wrapper_gallery">
+          <div className="slider_wrapper_gallery ">
             <div className="col-lg-12 d-flex align-items-center justify-content-around">
               <div className="col-lg-4 sm-first-wrapper">
                 {items.map((ite, index) => (
@@ -287,6 +321,12 @@ function Gallery() {
                     {index === currentIndexs && (
                       <div className="sm-img">
                         <img src={ite.src} alt="..."></img>
+                        <p
+                          className="size_16 line-28 text_black_dark"
+                          style={{ paddingTop: "8px" }}
+                        >
+                          {ite.text}
+                        </p>
                       </div>
                     )}
                   </div>
@@ -309,13 +349,13 @@ function Gallery() {
               </div>
             </div>
             <Row>
-              <Col className="d-flex Sluider_conting_wrappers col-lg-10">
-                <div className="Slider_Counting_Numbers col-lg-8 d-flex justify-content-lg-end justify-content-center">
+              <Col className="d-flex Sluider_conting_wrappers  col-lg-10">
+                <div className="Slider_Counting_Numbers col-lg-8 d-flex  justify-content-lg-end justify-content-center">
                   <button className="no_btn" onClick={handlePrevs}>
-                    <img src={HomePage_Left_Arrow} alt="..." id="arrow_img" />
+                    <img src={one_} alt="..." id="arrow_img" />
                   </button>
                   <button className="no_btn" onClick={handlenexts}>
-                    <img src={HomePage_Right_Arrow} alt="..." />
+                    <img src={two_} alt="..." />
                   </button>
                 </div>
               </Col>
