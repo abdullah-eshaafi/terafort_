@@ -18,16 +18,17 @@ function Navbar({ src, img }) {
   return (
     <div className="Navbar_Main_Container">
       <div className="Nabar_main_wrapper">
+        {" "}
+        <div onClick={handleShowNavabar}>
+          <img src={showNavbar ? cross_logo_terafort : img} alt="..."></img>
+        </div>
         <div>
           <Link to="/">
             <img src={showNavbar ? Tera_White : src} alt="..."></img>
           </Link>
         </div>
-        <div onClick={handleShowNavabar}>
-          <img src={showNavbar ? cross_logo_terafort : img} alt="..."></img>
-        </div>
       </div>
-      <Fade right collapse when={showNavbar}>
+      <Fade left collapse when={showNavbar}>
         <div
           className="Navbar_Content_wrapper"
           style={{ display: showNavbar ? showNavbar : "none" }}
