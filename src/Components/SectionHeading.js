@@ -15,15 +15,14 @@ function SectionHeading({ title, find, Us, here }) {
         <div className="about_section_heading d-flex">
           <div style={{ position: "relative" }} className="d-flex">
             <h2 className="size_225 line-272 letter-1_5 text_black_dark">
-              <Zoom bottom cascade>
-                {title}
-              </Zoom>
+              {title}
             </h2>
             <h2
               className="size_52 letter-1_5 text_black_dark line-52"
               id="chalo"
             >
-              {find} <br />
+              {find}
+              <br />
               {Us}
               <br />
               {here}

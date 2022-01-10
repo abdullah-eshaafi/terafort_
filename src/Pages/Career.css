@@ -185,4 +185,10 @@ button[disabled] {
   #Career_Family_section {
     margin-top: 0px;
   }
+  .Careers_Apply > h5 {
+    font-weight: bold;
+  }
+  #send_msg_btn {
+    color: black !important;
+  }
 }

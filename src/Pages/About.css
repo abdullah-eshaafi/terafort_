@@ -293,6 +293,11 @@
   .about_aims {
     height: 120px;
   }
+  .about_career_section {
+    position: relative;
+    top: 10%;
+    left: 8%;
+  }
 }
 
 @media only screen and (max-height: 600px) {

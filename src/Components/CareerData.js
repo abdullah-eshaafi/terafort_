@@ -14,9 +14,4 @@ export const CareerData = [
     Time: "Full-time",
     Loctaion: "Lahore",
   },
-  {
-    position: "Android Developer",
-    Time: "Full-time",
-    Loctaion: "Lahore",
-  },
 ];

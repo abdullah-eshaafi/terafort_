@@ -44,6 +44,9 @@
 .Navabar_List_Wrapper > li > a:hover {
   color: #ffffff;
 }
+.Navabar_List_Wrapper {
+  padding-left: 0px !important;
+}
 .Navabar_List_Wrapper > li > a {
   text-decoration: none;
   color: #ffffff;
@@ -87,3 +90,7 @@
     display: none;
   }
 }
+/* 
+ul {
+  padding-left: 0px !important;
+} */

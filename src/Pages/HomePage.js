@@ -14,7 +14,7 @@ import Vision_Line_HomePage from "../Resources/Images/Homepage/Vision_Line_HomeP
 
 import HomePage_Left_Arrow from "../Resources/Images/Homepage/HomePage_Left_Arrow.svg";
 
-import Eshaafi_Portfolio_Img from "../Resources/Images/Homepage/Eshaafi_Portfolio_Img.png";
+import Eshaafi_Portfolio_Img from "../Resources/Images/Homepage/Eshaafi_Portfolio_Img.jpg";
 import Cuptie_portfolio_img from "../Resources/Images/Homepage/Cuptie_portfolio_img.png";
 
 import Aurilian_portfolio_site from "../Resources/Images/Homepage/Aurilian_portfolio_site.png";

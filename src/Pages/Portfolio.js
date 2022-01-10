@@ -1,6 +1,6 @@
 import React from "react";
 import SectionHeading from "../Components/SectionHeading";
-import Eshaafi_Portfolio_Img from "../Resources/Images/Homepage/Eshaafi_Portfolio_Img.png";
+import Eshaafi_Portfolio_Img from "../Resources/Images/Homepage/Eshaafi_Portfolio_Img.jpg";
 import PortfolioSection from "../Components/PortfolioSection";
 import PortfolioTextSection from "../Components/PortfolioTextSection";
 import Cuptie_portfolio_img from "../Resources/Images/Homepage/Cuptie_portfolio_img.png";

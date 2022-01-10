@@ -228,7 +228,7 @@ function Careers() {
                 <Col lg={6} className="Careers_facility_img_wrapper">
                   <img src={Careers_Facility} alt="..." className="img-fluid" />
                 </Col>
-                <Col lg={5} className="my-auto Careers_facility_wrapper">
+                <Col lg={5} className="my-lg-auto Careers_facility_wrapper">
                   <Col lg={11}>
                     <div>
                       <h5 className="size_32 line-56">Facilities</h5>
