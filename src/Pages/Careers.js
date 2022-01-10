@@ -542,7 +542,7 @@ function Careers() {
                     >
                       {" "}
                       <div className={spiner}></div>
-                      Send <img src={Send_btn_Arroe} alt="..."></img>
+                      Apply Now <img src={Send_btn_Arroe} alt="..."></img>
                     </button>
                     <p className={"m-0"}>{success_message}</p>
                   </div>
