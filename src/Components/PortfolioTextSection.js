@@ -44,11 +44,9 @@ function PortfolioTextSection({
             </div>
           </div>
 
-          <div className="col-lg-9 PorfolioDesc_Section">
+          <div className="col-lg-7 PorfolioDesc_Section ">
             <p className="size_24 line-40 text_black_dark letter_0_5">
-              <Fade left cascade>
-                {PortfolioDesc}
-              </Fade>
+              <Fade left>{PortfolioDesc}</Fade>
             </p>
           </div>
           <Fade bottom>

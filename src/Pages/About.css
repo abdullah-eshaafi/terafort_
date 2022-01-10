@@ -194,17 +194,13 @@
   transition-duration: 1s;
   transform: scale(1.01);
 }
-/* 
-
-.CEO_About_Text_Wrapper {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  padding-left: 60px;
-} */
 
 .all-top-spacing {
   padding-top: 80px;
+}
+
+.about_aims {
+  height: 236px;
 }
 
 @media only screen and (max-width: 1439px) {
@@ -270,7 +266,7 @@
     margin-top: 8px;
   }
   .About_Values_Main_Container {
-    margin-top: 16px;
+    margin-top: 40%;
   }
   .Slider_Counting_Numbers {
     margin-top: 16px;
@@ -293,7 +289,14 @@
   .about_Line_image_wrapper {
     display: none;
   }
+
+  .about_aims {
+    height: 120px;
+  }
 }
 
 @media only screen and (max-height: 600px) {
+  .about_aims {
+    height: 100px;
+  }
 }

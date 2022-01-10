@@ -46,10 +46,9 @@
 
 .careers_table_wrapper {
   border-bottom: 1px solid #dadada;
-}
-.careers_table_wrapper > h5 {
   padding-bottom: 24px;
 }
+
 .careers_table_last_element {
   display: flex;
   justify-content: end;

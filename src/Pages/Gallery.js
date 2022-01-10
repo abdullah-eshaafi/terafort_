@@ -365,7 +365,7 @@ function Gallery() {
             <Container>
               <Row>
                 <Col>
-                  <div className="d-flex justify-content-between Footer_Heading_Wrapper">
+                  <div className="d-md-flex justify-content-between Footer_Heading_Wrapper">
                     <div>
                       <h5 className="size_24 line-36">Terafort</h5>
                     </div>
@@ -374,7 +374,7 @@ function Gallery() {
                       <h5 className="size_24 line-36">contact@terafort.com</h5>
                     </div>
                   </div>
-                  <div className="d-flex justify-content-between Footer_Address">
+                  <div className="d-md-flex justify-content-between Footer_Address">
                     <div className="col-md-3">
                       <h5 className="size_24 line-36 letter_0_5 text_black_666">
                         Terafort, Third Floor, The Plaza 100, MM Alam Road,

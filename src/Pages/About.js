@@ -190,8 +190,12 @@ function About() {
                 <Container style={{ background: "black" }}>
                   <Row style={{ background: "black" }}>
                     <Col style={{ background: "black" }}>
-                      <Row style={{ background: "black" }}>
-                        <Col lg={4} style={{ background: "black" }} className="our_values_wrapper">
+                      <Row className="about_values_main_container">
+                        <Col
+                          lg={4}
+                          style={{ background: "black" }}
+                          className="our_values_wrapper"
+                        >
                           <div
                             className="d-md-flex About_Values_Main_Container"
                             style={{ background: "black" }}
@@ -203,7 +207,10 @@ function About() {
                             </div>
 
                             <div className="col-lg-6 d-flex justify-content-center">
-                              <div style={{ marginTop: "20px" }} className="about_Line_image_wrapper">
+                              <div
+                                style={{ marginTop: "20px" }}
+                                className="about_Line_image_wrapper"
+                              >
                                 <img
                                   src={about_values_horizontal_line}
                                   alt=".."
@@ -236,7 +243,7 @@ function About() {
                         </Col>
                       </Row>
                       <Row>
-                        <Col style={{ height: "236px" }}>
+                        <Col className="about_aims">
                           <div className="col-lg-12 d-flex">
                             <div className="col-lg-4 Last_Index_Slider">
                               {items.map((item, index) => (
@@ -395,7 +402,7 @@ function About() {
                   <Container>
                     <Row>
                       <Col>
-                        <div className="d-flex justify-content-between Footer_Heading_Wrapper">
+                        <div className="d-md-flex justify-content-between Footer_Heading_Wrapper">
                           <div>
                             <h5 className="size_24 line-36">Terafort</h5>
                           </div>
@@ -406,7 +413,7 @@ function About() {
                             </h5>
                           </div>
                         </div>
-                        <div className="d-flex justify-content-between Footer_Address">
+                        <div className="d-md-flex justify-content-between Footer_Address">
                           <div className="col-md-3">
                             <h5 className="size_24 line-36 letter_0_5 text_black_666">
                               Terafort, Third Floor, The Plaza 100, MM Alam

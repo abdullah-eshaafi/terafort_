@@ -214,7 +214,6 @@ function Careers() {
 
   return (
     <>
-      {" "}
       <div className="HomePage-navbar-wrapper">
         <Navbar src={terafort_logo} img={side_menu} />
       </div>
@@ -285,25 +284,25 @@ function Careers() {
               </Col>
             </Row>
             <Row>
-              <Col lg={12} className="d-flex">
-                <Col md={6}>
-                  <div className="careers_table_wrapper">
+              <Col className="d-flex careers_table_wrapper">
+                <Col xs={5} md={7}>
+                  <div>
                     <h5 className="size_16 line-28 letter_0_5 text_A2A2A2">
                       Position
                     </h5>
                   </div>
                 </Col>
 
-                <Col lg={5} className="d-flex " md={6}>
-                  <Col lg={8}>
-                    <div className="careers_table_wrapper">
+                <Col className="d-flex" xs={7} md={5}>
+                  <Col>
+                    <div>
                       <h5 className="size_16 line-28 letter_0_5 text_A2A2A2">
                         Contract type
                       </h5>
                     </div>
                   </Col>
                   <Col>
-                    <div className="careers_table_wrapper careers_table_last_element">
+                    <div className="careers_table_last_element">
                       <h5 className="size_16 line-28 letter_0_5 text_A2A2A2">
                         Location
                       </h5>
@@ -314,24 +313,24 @@ function Careers() {
             </Row>
             {CareerData.map((data, index) => (
               <Row key={index}>
-                <Col lg={12} className="d-flex">
-                  <Col className="careers_dark_table_wrapper" md={6}>
-                    <div className="careers_table_wrapper">
+                <Col className="d-flex careers_table_wrapper">
+                  <Col className="careers_dark_table_wrapper" xs={5} md={7}>
+                    <div>
                       <h5 className="size_24 line-56 letter_0_5 text_black_dark">
                         {data.position}
                       </h5>
                     </div>
                   </Col>
-                  <Col lg={5} className="d-flex " md={6}>
-                    <Col lg={8} className="careers_dark_table_wrapper">
-                      <div className="careers_table_wrapper">
+                  <Col className="d-flex " xs={7} md={5}>
+                    <Col className="careers_dark_table_wrapper">
+                      <div>
                         <h5 className="size_24 line-56 letter_0_5 text_black_dark">
                           {data.Time}
                         </h5>
                       </div>
                     </Col>
                     <Col className="careers_dark_table_wrapper">
-                      <div className="careers_table_wrapper careers_table_last_element">
+                      <div className=" careers_table_last_element">
                         <h5 className="size_24 line-56 letter_0_5 text_black_dark">
                           {data.Loctaion}
                         </h5>
@@ -436,9 +435,9 @@ function Careers() {
                 <div className="col-lg-9 Careers_Apply_text">
                   <p className="size_32  line-56 text_black_dark">
                     Haven’t seen your dream job in our open roles, but think you
-                    and Terafort are a perfect match? Then, don’t miss out and
-                    apply now. Let’s meet and have do cup chaye and discuss your
-                    dream role.
+                    and Terafort are a perfect match? Be a part of the growing
+                    Terafort Family to reach new heights. Apply below & submit
+                    your resume for consideration.
                   </p>
                 </div>
               </Col>
@@ -556,7 +555,7 @@ function Careers() {
           <Container>
             <Row>
               <Col>
-                <div className="d-flex justify-content-between Footer_Heading_Wrapper">
+                <div className="d-md-flex justify-content-between Footer_Heading_Wrapper">
                   <div>
                     <h5 className="size_24 line-36">Terafort</h5>
                   </div>
@@ -565,7 +564,7 @@ function Careers() {
                     <h5 className="size_24 line-36">contact@terafort.com</h5>
                   </div>
                 </div>
-                <div className="d-flex justify-content-between Footer_Address">
+                <div className="d-md-flex justify-content-between Footer_Address">
                   <div className="col-md-3">
                     <h5 className="size_24 line-36 letter_0_5 text_black_666">
                       Terafort, Third Floor, The Plaza 100, MM Alam Road, Lahore

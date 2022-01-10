@@ -22,3 +22,6 @@
     display: none !important;
   }
 }
+.PorfolioDesc_Section {
+  text-align: justify;
+}

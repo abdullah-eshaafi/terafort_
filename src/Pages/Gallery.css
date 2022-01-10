@@ -132,10 +132,13 @@
 
   .lg-first-wrapper {
     width: 300px;
-    height: 300px;
+    height: 220px;
   }
   .Sluider_conting_wrappers {
     display: flex;
     justify-content: center;
+  }
+  .Gallery_Footer {
+    background: #f9ecb7;
   }
 }
