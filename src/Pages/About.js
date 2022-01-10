@@ -191,7 +191,7 @@ function About() {
                   <Row style={{ background: "black" }}>
                     <Col style={{ background: "black" }}>
                       <Row style={{ background: "black" }}>
-                        <Col lg={4} style={{ background: "black" }}>
+                        <Col lg={4} style={{ background: "black" }} className="our_values_wrapper">
                           <div
                             className="d-md-flex About_Values_Main_Container"
                             style={{ background: "black" }}
@@ -203,7 +203,7 @@ function About() {
                             </div>
 
                             <div className="col-lg-6 d-flex justify-content-center">
-                              <div style={{ marginTop: "20px" }}>
+                              <div style={{ marginTop: "20px" }} className="about_Line_image_wrapper">
                                 <img
                                   src={about_values_horizontal_line}
                                   alt=".."
@@ -363,8 +363,8 @@ function About() {
                             </h2>
                           </div>
                         </div>
-                        <div className="Join_Section_About_text">
-                          <div className="col-md-8">
+                        <div className="Join_Section_About_text col-md-8">
+                          <div className="col-md-10">
                             <p className="size_32 line-56">
                               Terafort is proud to be an Equal Opportunity
                               Employer. We value the perspectives, a diverse

@@ -123,8 +123,7 @@
 }
 @media only screen and (max-width: 576px) {
   .sm-first-wrapper {
-    width: 80px;
-    height: 176px;
+    display: none;
   }
   .sm-img > img {
     width: 100%;
@@ -132,8 +131,8 @@
   }
 
   .lg-first-wrapper {
-    width: 200px;
-    height: 236px;
+    width: 300px;
+    height: 300px;
   }
   .Sluider_conting_wrappers {
     display: flex;

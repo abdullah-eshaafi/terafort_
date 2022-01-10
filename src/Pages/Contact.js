@@ -291,9 +291,16 @@ function Contact() {
                       </h5>
                     </div>
                     <div>
-                      <h5 className="size_16 line-30 letter_0_5 text_white">
-                        view on map
-                      </h5>
+                      <a
+                        href="https://www.google.com/maps/place/eShaafi.com+%7C+Consult+Doctor+Online/@31.5056086,74.3476693,17z/data=!3m1!4b1!4m5!3m4!1s0x3919053d73525e23:0xfc12ab0c9b51ec36!8m2!3d31.505604!4d74.349858"
+                        target={"_blank"}
+                        style={{ color: "black" }}
+                      >
+                        {" "}
+                        <h5 className="size_16 line-30 letter_0_5 text_white">
+                          view on map
+                        </h5>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -320,7 +327,7 @@ function Contact() {
                     <Row className="d-flex justify-content-center">
                       <Col md={12}>
                         <div className="d-flex justify-content-center contact_form_input">
-                          <div className="col-md-6">
+                          <div className="col-md-6 col-12">
                             <input
                               type="text"
                               name="input-text"
@@ -338,7 +345,7 @@ function Contact() {
                           </div>
                         </div>
                         <div className="d-flex justify-content-center contact_form_input">
-                          <div className="col-md-6">
+                          <div className="col-md-6 col-12">
                             <input
                               type="text"
                               name="input-text"
@@ -356,7 +363,7 @@ function Contact() {
                           </div>
                         </div>
                         <div className="d-flex justify-content-center contact_form_input">
-                          <div className="col-md-6">
+                          <div className="col-md-6 col-12">
                             <input
                               type="text"
                               maxLength={15}

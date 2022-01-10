@@ -124,6 +124,31 @@
     top: 17.8%;
     left: 28%;
   }
+
+  .Conatct_wrapper {
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  .Page10 {
+    position: relative;
+    width: auto;
+    height: auto;
+    scroll-snap-align: start;
+    scroll-behavior: smooth;
+  }
+  .badShahi_mosque {
+    height: 40vh;
+  }
+  .Hr_Department_Contact {
+    height: 40vh;
+    margin-left: 16px;
+  }
 }
 
 @media only screen and (max-height: 600px) {

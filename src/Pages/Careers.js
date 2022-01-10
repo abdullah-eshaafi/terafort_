@@ -265,10 +265,10 @@ function Careers() {
           </div>
         </div>
         <div className="page5">
-          <Container>
+          <Container style={{ paddingTop: "40px" }}>
             <Row>
-              <Col lg={7}>
-                <div className="d-flex justify-content-between Career_Roles_Wrapper">
+              <Col lg={7} sm={12}>
+                <div className="d-flex justify-content-between Career_Roles_Wrapper ">
                   <h5 className="size_32 line-56 text_black_dark">
                     Open Roles
                   </h5>
@@ -286,22 +286,23 @@ function Careers() {
             </Row>
             <Row>
               <Col lg={12} className="d-flex">
-                <Col lg={7}>
+                <Col md={6}>
                   <div className="careers_table_wrapper">
                     <h5 className="size_16 line-28 letter_0_5 text_A2A2A2">
                       Position
                     </h5>
                   </div>
                 </Col>
-                <Col lg={5} className="d-flex ">
-                  <Col lg={7}>
+
+                <Col lg={5} className="d-flex " md={6}>
+                  <Col lg={8}>
                     <div className="careers_table_wrapper">
                       <h5 className="size_16 line-28 letter_0_5 text_A2A2A2">
                         Contract type
                       </h5>
                     </div>
                   </Col>
-                  <Col lg={3}>
+                  <Col>
                     <div className="careers_table_wrapper careers_table_last_element">
                       <h5 className="size_16 line-28 letter_0_5 text_A2A2A2">
                         Location
@@ -313,23 +314,23 @@ function Careers() {
             </Row>
             {CareerData.map((data, index) => (
               <Row key={index}>
-                <Col lg={12} className="d-flex ">
-                  <Col lg={7} className="careers_dark_table_wrapper">
+                <Col lg={12} className="d-flex">
+                  <Col className="careers_dark_table_wrapper" md={6}>
                     <div className="careers_table_wrapper">
                       <h5 className="size_24 line-56 letter_0_5 text_black_dark">
                         {data.position}
                       </h5>
                     </div>
                   </Col>
-                  <Col lg={5} className="d-flex ">
-                    <Col lg={7} className="careers_dark_table_wrapper">
+                  <Col lg={5} className="d-flex " md={6}>
+                    <Col lg={8} className="careers_dark_table_wrapper">
                       <div className="careers_table_wrapper">
                         <h5 className="size_24 line-56 letter_0_5 text_black_dark">
                           {data.Time}
                         </h5>
                       </div>
                     </Col>
-                    <Col lg={3} className="careers_dark_table_wrapper">
+                    <Col className="careers_dark_table_wrapper">
                       <div className="careers_table_wrapper careers_table_last_element">
                         <h5 className="size_24 line-56 letter_0_5 text_black_dark">
                           {data.Loctaion}
@@ -457,7 +458,7 @@ function Careers() {
             >
               <Col md={12}>
                 <div className="d-flex justify-content-center contact_form_input">
-                  <div className="col-md-6">
+                  <div className="col-md-6 col-12">
                     <input
                       type="text"
                       name="full_name"
@@ -475,7 +476,7 @@ function Careers() {
                   </div>
                 </div>
                 <div className="d-flex justify-content-center contact_form_input">
-                  <div className="col-md-6">
+                  <div className="col-md-6 col-12">
                     <input
                       type="text"
                       name="email"
@@ -493,7 +494,7 @@ function Careers() {
                   </div>
                 </div>
                 <div className="d-flex justify-content-center contact_form_input">
-                  <div className="col-md-6">
+                  <div className="col-md-6 col-12">
                     <select
                       required
                       spellCheck="false"
@@ -517,7 +518,7 @@ function Careers() {
                   </div>
                 </div>
                 <div className="d-flex justify-content-center contact_form_input">
-                  <div className="col-md-6">
+                  <div className="col-md-6 col-12">
                     <input
                       type="file"
                       accept=".doc, .docx, application/pdf"

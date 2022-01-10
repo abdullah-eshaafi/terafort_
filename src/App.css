@@ -168,11 +168,11 @@ p {
 /* 
 Css For ResponsiveNess In Tablets */
 
-@media only screen and (max-width: 1440px) {
+/* @media only screen and (max-width: 1440px) {
   .size_225 {
     font-size: 190px;
   }
-}
+} */
 @media only screen and (max-width: 1200px) {
   .size_225 {
     font-size: 170px;
@@ -200,13 +200,13 @@ Css For ResponsiveNess In Tablets */
 }
 @media only screen and (max-width: 576px) {
   .size_32 {
-    font-size: 26px;
+    font-size: 18px;
   }
   .size_80 {
     font-size: 40px;
   }
   .line-56 {
-    line-height: 40px;
+    line-height: 22px;
   }
   .line-180 {
     line-height: 100px;
@@ -239,12 +239,16 @@ Css For ResponsiveNess In Tablets */
   .size_16 {
     font-size: 12px;
   }
-  .line-56 {
+  /* .line-56 {
     line-height: 30px;
-  }
+  } */
 
   .Careers_Apply_text {
     margin-top: 0px;
+  }
+
+  .line-28 {
+    line-height: 20px;
   }
 }
 
@@ -263,7 +267,7 @@ Css For ResponsiveNess In Tablets */
     line-height: 30px;
   }
   .size_32 {
-    font-size: 20px;
+    font-size: 18px;
   }
   .size_225 {
     font-size: 100px;

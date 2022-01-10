@@ -167,13 +167,23 @@ button[disabled] {
 @media only screen and (max-width: 768px) {
 }
 @media only screen and (max-width: 576px) {
+  .Career_Roles_Wrapper > img {
+    display: none;
+  }
   .Careers_Departments {
     position: absolute;
-    top: 40.9%;
-    left: 1.3%;
+    top: 43.9%;
+    left: 12.3%;
     z-index: 1;
   }
   .Careers_Apply {
     margin-top: -10%;
+  }
+
+  .Careers_facility_img_wrapper {
+    padding-top: 30.33%;
+  }
+  #Career_Family_section {
+    margin-top: 0px;
   }
 }

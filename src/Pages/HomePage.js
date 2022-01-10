@@ -285,7 +285,7 @@ function HomePage() {
           Origins"
                       PortfolioLine="releasing the untapped
           potential in games"
-                      PortfolioDesc="Cuptie aims to generate apps and games. It intends to create mobile apps and games that are AI-based, yet not boring and not complicated to use. Cuptie designs mobile gaming apps to promote edutainment, creativity and innovation."
+                      PortfolioDesc="Aurelian Origins is a game development company made up of passionate programmers and designers. We love to develop games, which are attractive and easy to play."
                       line="line-120"
                       align="start"
                       col="10"

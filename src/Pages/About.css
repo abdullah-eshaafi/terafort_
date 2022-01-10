@@ -169,13 +169,15 @@
 .Join_Section_About_text {
   position: absolute;
   top: 40px;
-  left: 30.4%;
+  left: 25%;
+  /* top: 40px;
+  left: 30.4%; */
 }
 
 .about_career_section {
   position: relative;
-  top: 0;
-  left: 30.4%;
+  top: 10%;
+  left: 25%;
 }
 
 .about_career_section > img {
@@ -255,7 +257,7 @@
     height: auto;
     display: flex;
     align-items: start;
-    padding-left: 16px;
+    padding-left: 0px;
   }
   .about_message_text_section {
     margin-bottom: 8px;
@@ -278,6 +280,18 @@
     position: absolute;
     top: 10px;
     left: 10.4%;
+  }
+
+  .about_section_images_wrapper {
+    padding-left: 24px;
+  }
+
+  .our_values_wrapper {
+    margin-top: 120px;
+  }
+
+  .about_Line_image_wrapper {
+    display: none;
   }
 }
 
