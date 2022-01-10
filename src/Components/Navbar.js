@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 
-import side_menu from "../Resources/Images/Homepage/side_menu.svg";
-
 import Terafort_Bg_logo from "../Resources/Images/Homepage/Terafort_Bg_logo.png";
 import cross_logo_terafort from "../Resources/Images/Homepage/cross_logo_terafort.svg";
 
@@ -22,7 +20,7 @@ function Navbar({ src, img }) {
       <div className="Nabar_main_wrapper">
         <div>
           <Link to="/">
-            <img src={src} alt="..."></img>
+            <img src={showNavbar ? Tera_White : src} alt="..."></img>
           </Link>
         </div>
         <div onClick={handleShowNavabar}>
