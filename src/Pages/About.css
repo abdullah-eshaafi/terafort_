@@ -42,7 +42,7 @@
 
 .About_Main_Container_wrapper {
   width: 100vw;
-  height: calc(100vh - 100px);
+  height: 100vh;
   box-sizing: border-box;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
