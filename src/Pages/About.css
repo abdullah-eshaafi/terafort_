@@ -202,12 +202,24 @@
 .about_aims {
   height: 236px;
 }
+.Last_Index_Slider {
+  display: block;
+}
 
 @media only screen and (max-width: 1439px) {
+  .Last_Index_Slider {
+    display: block;
+  }
 }
 @media only screen and (max-width: 1200px) {
+  .Last_Index_Slider {
+    display: block;
+  }
 }
 @media only screen and (max-width: 992px) {
+  .Last_Index_Slider {
+    display: block;
+  }
 }
 @media only screen and (max-width: 768px) {
   .CEO_About_Text_Wrapper {

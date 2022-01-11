@@ -18,7 +18,6 @@ function Navbar({ src, img }) {
   return (
     <div className="Navbar_Main_Container">
       <div className="Nabar_main_wrapper">
-        {" "}
         <div onClick={handleShowNavabar}>
           <img src={showNavbar ? cross_logo_terafort : img} alt="..."></img>
         </div>
@@ -34,7 +33,10 @@ function Navbar({ src, img }) {
           style={{ display: showNavbar ? showNavbar : "none" }}
         >
           <div className="Navbar_List_Container">
-            <ul className="Navabar_List_Wrapper">
+            <ul
+              className="Navabar_List_Wrapper"
+              onClick={() => setSHowNavbar(!showNavbar)}
+            >
               <li>
                 <Link to="/">Home</Link>
               </li>

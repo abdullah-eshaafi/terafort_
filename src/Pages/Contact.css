@@ -88,7 +88,10 @@
   letter-spacing: 0.5px;
   color: #7e7e7e;
 }
-
+.contact_form_input > div > select:nth-child(1) {
+  color: #7e7e7e;
+  outline: none !important;
+}
 #send_msg_btn {
   border: 1px solid #000000;
   box-sizing: border-box;
@@ -102,12 +105,19 @@
 #send_msg_btn > img {
   padding-left: 12px;
 }
-.contact_form_input > div > input:focus {
+
+#send_msg_btn:hover {
+  background: #000000;
+  color: #ffffff !important;
+}
+.contact_form_input > div > input:focus,
+.contact_form_input > div > select:active {
   outline: none !important;
   border-bottom: 1px solid #000000;
 }
 
-.contact_form_input > div > input:active {
+.contact_form_input > div > input:active,
+.contact_form_input > div > select:active {
   outline: none !important;
   border-bottom: 1px solid #000000;
 }
