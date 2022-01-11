@@ -75,6 +75,7 @@
 .contact_form_input > div > textarea:focus-visible,
 .contact_form_input > div > select:focus-visible {
   outline: none;
+  outline-style: none;
   border-bottom: 1px solid #dadada;
 }
 .contact_form_input > div > input::placeholder,
@@ -87,10 +88,15 @@
   line-height: 28px;
   letter-spacing: 0.5px;
   color: #7e7e7e;
+/* 
+  outline: none !important;
+  outline-style: none; */
 }
 .contact_form_input > div > select:nth-child(1) {
   color: #7e7e7e;
   outline: none !important;
+  outline-style: none;
+  background-color: white;
 }
 #send_msg_btn {
   border: 1px solid #000000;
